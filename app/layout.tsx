@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   description: "Gaming studio creating amazing experiences",
   generator: "v0.app",
   icons: {
-    icon: "/images/mgs-transparent-logo-cropped.png",
-    shortcut: "/images/mgs-transparent-logo-cropped.png",
-    apple: "/images/mgs-transparent-logo-cropped.png",
+    icon: "/images/icon.png",
+    shortcut: "/images/icon.png",
+    apple: "/images/icon.png",
   },
 }
 
