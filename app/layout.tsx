@@ -26,6 +26,11 @@ export const metadata: Metadata = {
   title: "Met Game Studios",
   description: "Gaming studio creating amazing experiences",
   generator: "v0.app",
+  icons: {
+    icon: "/images/mgs-transparent-logo-cropped.png",
+    shortcut: "/images/mgs-transparent-logo-cropped.png",
+    apple: "/images/mgs-transparent-logo-cropped.png",
+  },
 }
 
 export default function RootLayout({
