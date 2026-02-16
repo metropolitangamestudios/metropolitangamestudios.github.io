@@ -104,6 +104,7 @@ export function AboutSection() {
                   fill
                   className="object-cover"
                   priority={currentIndex === 0}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </motion.div>
             </AnimatePresence>

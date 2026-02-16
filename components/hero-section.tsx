@@ -29,6 +29,7 @@ export function HeroSection() {
           fill
           className="object-cover scale-110"
           priority
+          sizes="100vw"
         />
       </motion.div>
 
