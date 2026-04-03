@@ -80,11 +80,11 @@ function EventCard({ event }: { event: EventItem }) {
         <div className="flex items-stretch gap-4 sm:gap-5 md:gap-6">
           <div className="flex min-w-0 flex-1 flex-col justify-between">
             <div>
-              <h2 className="font-display text-2xl font-bold leading-none text-[#452b57] sm:text-3xl md:text-7xl">
+              <h2 className="font-display text-4xl font-bold leading-none text-[#452b57] sm:text-3xl md:text-7xl">
                 {event.title}
               </h2>
               <p
-                className="-mt-1 font-display text-sm leading-none text-white sm:text-lg md:text-5xl"
+                className="-mt-1 font-display text-2xl leading-none text-white sm:text-lg md:text-5xl"
                 style={outlinedSubtitleStyle}
               >
                 {event.subtitle}
@@ -171,8 +171,8 @@ export function EventsPageClient() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="mx-auto w-full max-w-5xl">
             <div>
-              <div className="mb-4 flex flex-wrap items-center justify-between gap-4 sm:gap-6">
-                <div className="flex flex-wrap items-center gap-4 sm:gap-6">
+              <div className="mb-4 flex items-center justify-between gap-3 sm:gap-6">
+                <div className="flex min-w-0 items-center gap-3 sm:flex-wrap sm:gap-6">
                   {eventsPageData.seasons.map((season) => {
                     const isSelected = season.id === selectedSeason.id
 
@@ -181,7 +181,7 @@ export function EventsPageClient() {
                         key={season.id}
                         type="button"
                         onClick={() => setSelectedSeasonId(season.id)}
-                        className={`font-display text-xl uppercase tracking-wide transition-colors sm:text-3xl md:text-[2.5rem] ${
+                        className={`shrink-0 px-0 py-0 font-display text-2xl uppercase tracking-wide leading-none transition-colors sm:text-3xl md:text-[2.5rem] ${
                           isSelected ? "text-white" : "text-[#e6a6fd]"
                         }`}
                       >
@@ -191,7 +191,7 @@ export function EventsPageClient() {
                   })}
                 </div>
 
-                <div className="relative w-full max-w-[170px] shrink-0">
+                <div className="relative w-[140px] shrink-0 sm:w-full sm:max-w-[170px]">
                   <select
                     aria-label="Archive"
                     defaultValue={eventsPageData.archiveOptions[0]?.id}
@@ -209,8 +209,8 @@ export function EventsPageClient() {
               </div>
 
               <h1 className="w-full font-display text-[2.65rem] font-bold uppercase leading-[0.9] sm:text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem]">
-                <span className="text-[#e6a6fd]">Current Events:</span>{" "}
-                <span className="text-white">{selectedSeason.titleLabel}</span>
+                <span className="text-[#e6a6fd]">Current Events:</span>
+                <span className="block text-white sm:inline sm:pl-3">{selectedSeason.titleLabel}</span>
               </h1>
             </div>
 

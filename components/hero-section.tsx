@@ -37,7 +37,7 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20" />
 
       <motion.div
-        className="absolute left-4 sm:left-8 md:left-28 top-1/2 w-full h-1/2 sm:h-2/3 z-10"
+        className="absolute left-1/2 top-1/2 h-1/2 w-[88%] -translate-x-1/2 sm:left-8 sm:w-full sm:translate-x-0 md:left-28 sm:h-2/3 z-10"
         style={{ y: logoY }}
       >
         <motion.div
