@@ -35,7 +35,7 @@ export function Footer() {
             </Link>
             <div className="hidden sm:block h-px bg-white/30 w-8 lg:w-16"></div>
             <Link
-              href="#events"
+              href="/events"
               className="text-xl sm:text-3xl lg:text-5xl font-display uppercase tracking-wide text-white hover:text-[#D4C4E8] transition-colors text-center"
             >
               Events

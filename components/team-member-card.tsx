@@ -13,7 +13,7 @@ export interface TeamMember {
   image: string
   imageZoom?: number
   imagePosition?: string
-  socials: {
+    socials: {
       twitter?: string
       discord?: string
       youtube?: string
@@ -22,6 +22,7 @@ export interface TeamMember {
       instagram?: string
       tiktok?: string
       github?: string
+      website?: string
     }
 }
 

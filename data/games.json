@@ -1,0 +1,153 @@
+{
+  "eyebrow": "Studio Archive",
+  "intro": "A snapshot of the prototypes, pitches, and playable experiments built by Met Game Studios teams. Replace the placeholder copy below with official credits, platform details, and final release notes when they are ready.",
+  "featuredGameIds": [
+    "placeholder-game-01",
+    "placeholder-game-02",
+    "placeholder-game-03",
+    "placeholder-game-04"
+  ],
+  "games": [
+    {
+      "id": "placeholder-game-01",
+      "title": "Placeholder Game 01",
+      "season": "Fall 2025",
+      "status": "Showcase Build",
+      "tagline": "Replace this with a tight one-line pitch for the game.",
+      "description": "Use this space for the project's genre, team size, production context, and standout mechanics. It is designed to hold short archive copy without overcrowding the layout.",
+      "image": "/images/games/22+Z45.png",
+      "imageAlt": "Placeholder game artwork 01",
+      "tags": ["Narrative", "2D", "Prototype"],
+      "links": [
+        { "label": "View Build", "href": "#" },
+        { "label": "Credits", "href": "#" }
+      ]
+    },
+    {
+      "id": "placeholder-game-02",
+      "title": "Placeholder Game 02",
+      "season": "Winter 2026",
+      "status": "Featured Concept",
+      "tagline": "Swap in a memorable hook that sells the game's tone fast.",
+      "description": "Ideal for a concise summary covering the player fantasy, visual identity, and what made the project special during development or showcase season.",
+      "image": "/images/games/6CjnSq.png",
+      "imageAlt": "Placeholder game artwork 02",
+      "tags": ["Action", "Team Project", "Playable"],
+      "links": [
+        { "label": "Playtest Notes", "href": "#" },
+        { "label": "Trailer", "href": "#" }
+      ]
+    },
+    {
+      "id": "placeholder-game-03",
+      "title": "Placeholder Game 03",
+      "season": "Fall 2024",
+      "status": "Archive Highlight",
+      "tagline": "Use this line to frame the game in one strong sentence.",
+      "description": "This card supports a slightly longer description for archive context, such as project goals, disciplines involved, and where the team presented the build.",
+      "image": "/images/games/DRNLIu.png",
+      "imageAlt": "Placeholder game artwork 03",
+      "tags": ["Atmospheric", "Puzzle", "Student Demo"],
+      "links": [
+        { "label": "Overview", "href": "#" },
+        { "label": "Team", "href": "#" }
+      ]
+    },
+    {
+      "id": "placeholder-game-04",
+      "title": "Placeholder Game 04",
+      "season": "Winter 2025",
+      "status": "Vertical Slice",
+      "tagline": "A clean placeholder line for mood, stakes, or core mechanic.",
+      "description": "Use the body copy for milestone details, build format, and any notable production beats you want visitors to understand at a glance.",
+      "image": "/images/games/PFNaea.png",
+      "imageAlt": "Placeholder game artwork 04",
+      "tags": ["Adventure", "Stylized", "Club Favorite"],
+      "links": [
+        { "label": "Build Page", "href": "#" },
+        { "label": "Devlog", "href": "#" }
+      ]
+    },
+    {
+      "id": "placeholder-game-05",
+      "title": "Placeholder Game 05",
+      "season": "Fall 2023",
+      "status": "Archive Entry",
+      "tagline": "Placeholder hook for a fast-scanning game card.",
+      "description": "Keep this section focused on the concept, genre, and one or two details that help distinguish the project from the rest of the archive.",
+      "image": "/images/games/YiNSii.png",
+      "imageAlt": "Placeholder game artwork 05",
+      "tags": ["Experimental", "Indie", "Concept"],
+      "links": [
+        { "label": "More Info", "href": "#" }
+      ]
+    },
+    {
+      "id": "placeholder-game-06",
+      "title": "Placeholder Game 06",
+      "season": "Winter 2024",
+      "status": "Prototype",
+      "tagline": "Placeholder copy for the game's elevator pitch.",
+      "description": "A brief archive note can go here, including the sort of experience the team was pursuing and what stage the game reached.",
+      "image": "/images/games/MgJjNX.png",
+      "imageAlt": "Placeholder game artwork 06",
+      "tags": ["Co-op", "Arcade", "Student Work"],
+      "links": [
+        { "label": "Archive Link", "href": "#" }
+      ]
+    },
+    {
+      "id": "placeholder-game-07",
+      "title": "Placeholder Game 07",
+      "season": "Fall 2022",
+      "status": "Concept Pitch",
+      "tagline": "A short placeholder blurb for the game's identity.",
+      "description": "Use this area to note presentation context, team disciplines, and anything else that helps this project feel distinct in the archive.",
+      "image": "/images/games/LrerCt.png",
+      "imageAlt": "Placeholder game artwork 07",
+      "tags": ["Sci-Fi", "Narrative", "Pitch"],
+      "links": [
+        { "label": "Details", "href": "#" }
+      ]
+    },
+    {
+      "id": "placeholder-game-08",
+      "title": "Placeholder Game 08",
+      "season": "Winter 2023",
+      "status": "Playtest Build",
+      "tagline": "Placeholder one-liner for tone, setting, or player fantasy.",
+      "description": "This card can hold a quick note about mechanics, team structure, or how the build was showcased within the club.",
+      "image": "/images/games/hGGlk5.png",
+      "imageAlt": "Placeholder game artwork 08",
+      "tags": ["Horror", "3D", "Playtest"],
+      "links": [
+        { "label": "Project Notes", "href": "#" }
+      ]
+    }
+  ],
+  "archiveWall": [
+    "/images/games/22+Z45.png",
+    "/images/games/6CjnSq.png",
+    "/images/games/DRNLIu.png",
+    "/images/games/PFNaea.png",
+    "/images/games/YiNSii.png",
+    "/images/games/MgJjNX.png",
+    "/images/games/LrerCt.png",
+    "/images/games/hGGlk5.png",
+    "/images/games/yOcVGg.png",
+    "/images/games/vT8FeJ.png",
+    "/images/games/Ur1Slj.png",
+    "/images/games/Sq4VnP.png",
+    "/images/games/sKlk4O.png",
+    "/images/games/rmqKTR.png",
+    "/images/games/rbtIUZ.png",
+    "/images/games/pdbw7n.png",
+    "/images/games/n8YdJg.png",
+    "/images/games/MLM5ut.png",
+    "/images/games/lGVKf5.png",
+    "/images/games/iSQebv.png",
+    "/images/games/hgpimw.png",
+    "/images/games/ebter1.png",
+    "/images/games/_LrFsW.png"
+  ]
+}

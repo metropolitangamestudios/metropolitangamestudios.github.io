@@ -5,10 +5,14 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const images = [
   "/images/PS14.jpg",
   "/images/PS15.jpg",
+  "/images/KDS07302.jpg",
+  "/images/KDS07106.jpg",
+  "/images/KDS06990.jpg",
 ]
 
 export function AboutSection() {
@@ -148,9 +152,11 @@ export function AboutSection() {
             </p>
             <Button
               size="lg"
-              className="text-xl sm:text-3xl md:text-4xl bg-[#6B5580] hover:bg-[#5A4670] text-white font-display uppercase tracking-wide px-5 sm:px-10 py-3 sm:py-6 pt-4 sm:pt-8 !mt-2 sm:!mt-4"
+              className="!mt-2 border-2 border-white bg-[#6B5580] px-5 py-3 pt-4 font-display text-xl uppercase tracking-wide text-white hover:bg-[#5A4670] sm:!mt-4 sm:px-10 sm:py-6 sm:pt-8 sm:text-3xl md:text-4xl"
             >
-              Read More
+              <Link href="/team" className="text-white">
+                Meet the Team
+              </Link>
             </Button>
           </motion.div>
         </div>

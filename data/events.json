@@ -1,0 +1,156 @@
+{
+  "currentSeasonId": "winter-2026",
+  "archiveOptions": [
+    {
+      "id": "archive",
+      "label": "Archive"
+    }
+  ],
+  "seasons": [
+    {
+      "id": "fall-2025",
+      "buttonLabel": "Fall 2025",
+      "titleLabel": "FALL 2025",
+      "events": [
+        {
+          "id": "fall-game-jam",
+          "title": "FALL 2025 GAME JAM",
+          "subtitle": "OCTOBER 17-19, 2025 | MAC 205",
+          "tagline": "Join us for a weekend of collaborative prototyping, rapid pitching, and team building.",
+          "description": "Spend the weekend building a fresh concept with artists, designers, writers, and programmers from across the club. We'll kick things off with theme reveals, mentoring check-ins, and a final showcase at the end of the jam.",
+          "image": "/images/KDS07302.jpg",
+          "imageAlt": "Students gathered together during a Met Game Studios event",
+          "links": [
+            {
+              "label": "RSVP",
+              "href": "#"
+            },
+            {
+              "label": "Jam Rules",
+              "href": "#"
+            }
+          ],
+          "socials": {
+            "twitter": "https://x.com/metgamestudio",
+            "discord": "https://discord.com/invite/MDc6Cf7QFz",
+            "youtube": "https://www.youtube.com/@metgamestudio",
+            "twitch": "https://www.twitch.tv/metgamestudio"
+          },
+          "defaultExpanded": true
+        },
+        {
+          "id": "fall-career-panel",
+          "title": "FALL 2025 CAREER PANEL",
+          "subtitle": "OCTOBER 24, 2025 | MAC 205",
+          "tagline": "Meet alumni and industry guests for practical advice on portfolios, internships, and creative careers.",
+          "description": "A moderated conversation with alumni and guest speakers covering portfolio strategy, networking, and first-job expectations. Bring your questions and stick around afterward for an informal mixer.",
+          "image": "/images/KDS07106.jpg",
+          "imageAlt": "Students listening during a community event",
+          "links": [
+            {
+              "label": "Reserve Seat",
+              "href": "#"
+            },
+            {
+              "label": "Speaker List",
+              "href": "#"
+            }
+          ],
+          "socials": {
+            "discord": "https://discord.com/invite/MDc6Cf7QFz",
+            "linkedin": "https://www.linkedin.com/company/met-games"
+          }
+        },
+        {
+          "id": "fall-showcase-night",
+          "title": "FALL 2025 SHOWCASE NIGHT",
+          "subtitle": "DECEMBER 4, 2025 | RCC 204",
+          "tagline": "A casual end-of-term spotlight on prototypes, updates, and the people behind them.",
+          "description": "We'll close the term with short presentations, playable builds, and a community hangout. Expect snapshots from ongoing projects, team introductions, and a look ahead to the next semester.",
+          "image": "/images/KDS06990.jpg",
+          "imageAlt": "Crowd attending a student showcase",
+          "links": [
+            {
+              "label": "Event Details",
+              "href": "#"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "winter-2026",
+      "buttonLabel": "Winter 2026",
+      "titleLabel": "WINTER 2026",
+      "events": [
+        {
+          "id": "winter-kickoff",
+          "title": "WINTER 2026 CLUB KICKOFF",
+          "subtitle": "JANUARY 15, 2026 | LIB 72",
+          "tagline": "Start the semester with team intros, roadmap updates, and ways to plug into projects.",
+          "description": "This kickoff session introduces the semester's initiatives, upcoming collaboration opportunities, and event calendar. New and returning members can meet leads, hear project pitches, and learn how to get involved right away.",
+          "image": "/images/PS14.jpg",
+          "imageAlt": "Attendees speaking at a kickoff event",
+          "links": [
+            {
+              "label": "Sign Up",
+              "href": "#"
+            },
+            {
+              "label": "Discord",
+              "href": "https://discord.com/invite/MDc6Cf7QFz"
+            }
+          ],
+          "socials": {
+            "discord": "https://discord.com/invite/MDc6Cf7QFz",
+            "instagram": "https://www.instagram.com/metgamestudio/",
+            "youtube": "https://www.youtube.com/@metgamestudio"
+          },
+          "defaultExpanded": true
+        },
+        {
+          "id": "winter-playtest-lab",
+          "title": "WINTER 2026 PLAYTEST LAB",
+          "subtitle": "FEBRUARY 6, 2026 | POD 250",
+          "tagline": "Bring your latest build, gather feedback fast, and trade notes with other teams.",
+          "description": "An open-format playtest night focused on iteration. Teams can rotate through feedback stations, compare notes on usability and pacing, and leave with actionable next steps for their prototypes.",
+          "image": "/images/PS15.jpg",
+          "imageAlt": "Students participating in a playtest session",
+          "links": [
+            {
+              "label": "Submit Build",
+              "href": "#"
+            },
+            {
+              "label": "Volunteer",
+              "href": "#"
+            }
+          ],
+          "socials": {
+            "twitch": "https://www.twitch.tv/metgamestudio",
+            "discord": "https://discord.com/invite/MDc6Cf7QFz"
+          }
+        },
+        {
+          "id": "winter-studio-social",
+          "title": "WINTER 2026 STUDIO SOCIAL",
+          "subtitle": "MARCH 12, 2026 | SLC 308",
+          "tagline": "A low-pressure hangout for meeting collaborators, sharing works-in-progress, and celebrating milestones.",
+          "description": "Part mixer, part mini-showcase, this social is designed to help people meet across disciplines. Drop in for conversation, community updates, and a few lighthearted activities between project sprints.",
+          "image": "/images/KDS07106.jpg",
+          "imageAlt": "Students chatting at a social gathering",
+          "links": [
+            {
+              "label": "RSVP",
+              "href": "#"
+            }
+          ],
+          "socials": {
+            "instagram": "https://www.instagram.com/metgamestudio/",
+            "linkedin": "https://www.linkedin.com/company/met-games"
+          }
+        }
+      ]
+    }
+  ]
+}

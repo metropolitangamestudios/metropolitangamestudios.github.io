@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState, useEffect } from "react"
+import { useEffect, useRef, useState } from "react"
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
@@ -8,12 +8,15 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const images = [
-  "/images/KDS07302.jpg",
-  "/images/KDS07106.jpg",
-  "/images/KDS06990.jpg",
+  "/images/games/22+Z45.png",
+  "/images/games/6CjnSq.png",
+  "/images/games/DRNLIu.png",
+  "/images/games/hGGlk5.png",
+  "/images/games/MLM5ut.png",
+  "/images/games/PFNaea.png",
 ]
 
-export function EventsSection() {
+export function GamesSection() {
   const ref = useRef<HTMLElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -22,13 +25,10 @@ export function EventsSection() {
   const touchStartYRef = useRef<number | null>(null)
 
   const { scrollYProgress } = useScroll({
-    // Track the actual content, not the padded section,
-    // so parallax/opacity start when the content is on screen.
     target: contentRef,
     offset: ["start end", "center center"],
   })
 
-  // On small screens, disable parallax offsets so stacked content doesn't visually overlap.
   const y = useTransform(scrollYProgress, [0.15, 0.85], isMdUp ? [50, -50] : [0, 0])
   const textY = useTransform(scrollYProgress, [0.15, 0.85], isMdUp ? [80, -80] : [0, 0])
   const opacity = useTransform(scrollYProgress, [0.1, 0.3], [0, 1])
@@ -60,7 +60,6 @@ export function EventsSection() {
     const deltaX = t.clientX - startX
     const deltaY = t.clientY - startY
 
-    // Ignore mostly-vertical gestures (page scroll).
     if (Math.abs(deltaY) > 60 || Math.abs(deltaX) < 40) return
 
     if (deltaX < 0) nextSlide()
@@ -84,12 +83,12 @@ export function EventsSection() {
   }, [])
 
   return (
-    <section ref={ref} className="pt-24 sm:pt-32 md:pt-40 pb-12 sm:pb-24 bg-[#412c58] text-white overflow-hidden">
+    <section ref={ref} className="bg-[#412c58] pb-12 pt-24 text-white overflow-hidden sm:pb-24 sm:pt-32 md:pt-40">
       <div className="container mx-auto px-4 sm:px-6">
-        <div ref={contentRef} className="grid md:grid-cols-2 gap-6 sm:gap-12 items-center">
-          <motion.div 
+        <div ref={contentRef} className="grid items-center gap-6 md:grid-cols-2 sm:gap-12">
+          <motion.div
             style={{ y, opacity }}
-            className="relative w-full rounded-lg aspect-video overflow-hidden order-1 md:order-2 mt-0 md:mt-0 min-h-[220px] sm:min-h-[360px] md:min-h-[520px] max-w-[640px] shadow-2xl group touch-pan-y"
+            className="group relative order-1 mt-0 aspect-video min-h-[220px] w-full max-w-[640px] overflow-hidden rounded-lg bg-[#d7cae6] shadow-2xl touch-pan-y sm:min-h-[360px] md:order-2 md:mt-0 md:min-h-[520px]"
             onTouchStart={onTouchStart}
             onTouchEnd={onTouchEnd}
           >
@@ -104,7 +103,7 @@ export function EventsSection() {
               >
                 <Image
                   src={images[currentIndex]}
-                  alt={`Past Event Image ${currentIndex + 1}`}
+                  alt={`Club game artwork ${currentIndex + 1}`}
                   fill
                   className="object-cover"
                   priority={currentIndex === 0}
@@ -112,29 +111,29 @@ export function EventsSection() {
                 />
               </motion.div>
             </AnimatePresence>
-            
-            <button 
-              onClick={(e) => { e.preventDefault(); prevSlide(); }}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors z-20 opacity-0 group-hover:opacity-100"
+
+            <button
+              onClick={(e) => { e.preventDefault(); prevSlide() }}
+              className="absolute left-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white opacity-0 transition-colors hover:bg-black/50 group-hover:opacity-100"
               aria-label="Previous slide"
             >
               <ChevronLeft size={24} />
             </button>
-            <button 
-              onClick={(e) => { e.preventDefault(); nextSlide(); }}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-colors z-20 opacity-0 group-hover:opacity-100"
+            <button
+              onClick={(e) => { e.preventDefault(); nextSlide() }}
+              className="absolute right-4 top-1/2 z-20 -translate-y-1/2 rounded-full bg-black/30 p-2 text-white opacity-0 transition-colors hover:bg-black/50 group-hover:opacity-100"
               aria-label="Next slide"
             >
               <ChevronRight size={24} />
             </button>
 
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+            <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 gap-2">
               {images.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === currentIndex ? "bg-white w-4" : "bg-white/50"
+                  className={`h-2 w-2 rounded-full transition-all ${
+                    index === currentIndex ? "w-4 bg-white" : "bg-white/50"
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -142,21 +141,21 @@ export function EventsSection() {
             </div>
           </motion.div>
 
-          <motion.div style={{ y: textY }} className="space-y-4 sm:space-y-6 order-2 md:order-1 md:pt-10">
-            <h2 className="text-[3.5rem] sm:text-[7rem] md:text-[9rem] lg:text-[11rem] font-display font-bold uppercase leading-[0.85]">
-              Past
+          <motion.div style={{ y: textY }} className="order-2 space-y-4 sm:space-y-6 md:order-1 md:pt-10">
+            <h2 className="text-[3.5rem] font-display font-bold uppercase leading-[0.85] sm:text-[7rem] md:text-[9rem] lg:text-[11rem]">
+              Our
               <br />
-              Events
+              Games
             </h2>
-            <p className="text-base sm:text-xl md:text-2xl text-[#D4C4E8] leading-relaxed font-sans">
-              From playtests to panels, our events are where ideas turn into prototypes. Catch the best moments and what we learned.
+            <p className="font-sans text-base leading-relaxed text-[#D4C4E8] sm:text-xl md:text-2xl">
+              Explore the games our club has brought to life across past seasons, from polished class projects to bold experimental prototypes built by multidisciplinary teams.
             </p>
             <Button
               asChild
               size="lg"
-              className="text-xl sm:text-3xl md:text-4xl bg-[#6B5580] hover:bg-[#5A4670] text-white font-display uppercase tracking-wide px-5 sm:px-10 py-3 sm:py-6 pt-4 sm:pt-8 !mt-2 sm:!mt-4"
+              className="!mt-2 border-2 border-white bg-[#6B5580] px-5 py-3 pt-4 font-display text-xl uppercase tracking-wide text-white hover:bg-[#5A4670] sm:!mt-4 sm:px-10 sm:py-6 sm:pt-8 sm:text-3xl md:text-4xl"
             >
-              <Link href="/events">Read More</Link>
+              <Link href="/games">See Previous Games</Link>
             </Button>
           </motion.div>
         </div>

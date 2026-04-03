@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDiscord, faXTwitter, faYoutube, faTwitch, faLinkedin, faInstagram, faTiktok, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 
 interface SocialLinksProps {
   socials: {
@@ -11,6 +12,7 @@ interface SocialLinksProps {
     instagram?: string
     tiktok?: string
     github?: string
+    website?: string
   }
   size?: "sm" | "md" | "lg"
   centered?: boolean
@@ -113,6 +115,17 @@ export function SocialLinks({ socials, size = "lg", centered = false }: SocialLi
           aria-label="GitHub"
         >
           <FontAwesomeIcon icon={faGithub} style={{color: "#3a0c77", width: iconSize, height: iconSize}} />
+        </a>
+      )}
+      {socials.website && (
+        <a
+          href={socials.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:opacity-80 transition-opacity"
+          aria-label="Website"
+        >
+          <FontAwesomeIcon icon={faGlobe} style={{color: "#3a0c77", width: iconSize, height: iconSize}} />
         </a>
       )}
     </div>

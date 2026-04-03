@@ -40,15 +40,19 @@ export function HeroSection() {
         className="absolute left-4 sm:left-8 md:left-28 top-1/2 w-full h-1/2 sm:h-2/3 z-10"
         style={{ y: logoY }}
       >
-        <div className="relative h-full w-full">
+        <motion.div
+          className="relative h-full w-full"
+          animate={{ y: [0, -8, 0] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        >
           <Image
             src="/images/mgs-transparent-logo.png"
             alt="Met Game Studios Logo"
             fill
-            className="object-contain object-left"
+            className="object-contain object-left drop-shadow-[0_16px_22px_rgba(0,0,0,0.38)]"
             priority
           />
-        </div>
+        </motion.div>
       </motion.div>
     </section>
   )

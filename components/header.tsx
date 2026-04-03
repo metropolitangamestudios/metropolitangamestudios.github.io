@@ -50,8 +50,6 @@ export function Header() {
   const lastScrollYRef = useRef(0)
 
   const isHome = pathname === "/"
-  const gamesHref = isHome ? "#games" : "/#games"
-  const eventsHref = isHome ? "#events" : "/#events"
 
   useEffect(() => {
     const controlHeader = () => {
@@ -146,19 +144,25 @@ export function Header() {
             <div className="flex items-center gap-3">
               <div className="hidden sm:flex items-center gap-4 md:gap-8">
                 <Link
+                  href="/"
+                  className="text-lg md:text-2xl font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
+                >
+                  Home
+                </Link>
+                <Link
                   href="/team"
                   className="text-lg md:text-2xl font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
                 >
                   Meet the Team
                 </Link>
                 <Link
-                  href={gamesHref}
+                  href="/games"
                   className="text-lg md:text-2xl font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
                 >
                   Games
                 </Link>
                 <Link
-                  href={eventsHref}
+                  href="/events"
                   className="text-lg md:text-2xl font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
                 >
                   Events
@@ -218,14 +222,14 @@ export function Header() {
                   Meet the Team
                 </Link>
                 <Link
-                  href={gamesHref}
+                  href="/games"
                   className="text-lg font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Games
                 </Link>
                 <Link
-                  href={eventsHref}
+                  href="/events"
                   className="text-lg font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
