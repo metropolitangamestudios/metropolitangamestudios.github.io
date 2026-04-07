@@ -24,7 +24,7 @@ const brickSans = localFont({
 
 export const metadata: Metadata = {
   title: "Met Game Studios",
-  description: "Gaming studio creating amazing experiences",
+  description: "Toronto Metropolitan University's student gaming studio creating amazing experiences",
   generator: "v0.app",
   icons: {
     icon: "/images/icon.png",
