@@ -20,16 +20,6 @@
           "description": "Spend the weekend building a fresh concept with artists, designers, writers, and programmers from across the club. We'll kick things off with theme reveals, mentoring check-ins, and a final showcase at the end of the jam.",
           "image": "/images/KDS07302.jpg",
           "imageAlt": "Students gathered together during a Met Game Studios event",
-          "links": [
-            {
-              "label": "RSVP",
-              "href": "#"
-            },
-            {
-              "label": "Jam Rules",
-              "href": "#"
-            }
-          ],
           "socials": {
             "twitter": "https://x.com/metgamestudio",
             "discord": "https://discord.com/invite/MDc6Cf7QFz",
@@ -46,16 +36,6 @@
           "description": "A moderated conversation with alumni and guest speakers covering portfolio strategy, networking, and first-job expectations. Bring your questions and stick around afterward for an informal mixer.",
           "image": "/images/KDS07106.jpg",
           "imageAlt": "Students listening during a community event",
-          "links": [
-            {
-              "label": "Reserve Seat",
-              "href": "#"
-            },
-            {
-              "label": "Speaker List",
-              "href": "#"
-            }
-          ],
           "socials": {
             "discord": "https://discord.com/invite/MDc6Cf7QFz",
             "linkedin": "https://www.linkedin.com/company/met-games"
@@ -69,12 +49,7 @@
           "description": "We'll close the term with short presentations, playable builds, and a community hangout. Expect snapshots from ongoing projects, team introductions, and a look ahead to the next semester.",
           "image": "/images/KDS06990.jpg",
           "imageAlt": "Crowd attending a student showcase",
-          "links": [
-            {
-              "label": "Event Details",
-              "href": "#"
-            }
-          ]
+          "links": []
         }
       ]
     },
@@ -92,10 +67,6 @@
           "image": "/images/PS14.jpg",
           "imageAlt": "Attendees speaking at a kickoff event",
           "links": [
-            {
-              "label": "Sign Up",
-              "href": "#"
-            },
             {
               "label": "Discord",
               "href": "https://discord.com/invite/MDc6Cf7QFz"
@@ -116,18 +87,26 @@
           "description": "An open-format playtest night focused on iteration. Teams can rotate through feedback stations, compare notes on usability and pacing, and leave with actionable next steps for their prototypes.",
           "image": "/images/PS15.jpg",
           "imageAlt": "Students participating in a playtest session",
+          "socials": {
+            "twitch": "https://www.twitch.tv/metgamestudio",
+            "discord": "https://discord.com/invite/MDc6Cf7QFz"
+          }
+        },
+        {
+          "id": "winter-game-jam",
+          "title": "WINTER 2026 GAME JAM",
+          "subtitle": "FEBRUARY 12, 2026",
+          "tagline": "Build something new with fellow developers, artists, designers, and storytellers during our winter jam.",
+          "description": "The Winter 2026 Game Jam is a fast-paced club event focused on collaboration, creativity, and rapid prototyping. Form a team, explore an idea, and share your work with the community at the end of the jam.",
+          "image": "/images/winter_game_jam_2026.png",
+          "imageAlt": "Winter 2026 Game Jam promotional graphic",
           "links": [
             {
-              "label": "Submit Build",
-              "href": "#"
-            },
-            {
-              "label": "Volunteer",
-              "href": "#"
+              "label": "Itch.io",
+              "href": "https://metgamestudio.itch.io/"
             }
           ],
           "socials": {
-            "twitch": "https://www.twitch.tv/metgamestudio",
             "discord": "https://discord.com/invite/MDc6Cf7QFz"
           }
         },
@@ -139,12 +118,7 @@
           "description": "Part mixer, part mini-showcase, this social is designed to help people meet across disciplines. Drop in for conversation, community updates, and a few lighthearted activities between project sprints.",
           "image": "/images/KDS07106.jpg",
           "imageAlt": "Students chatting at a social gathering",
-          "links": [
-            {
-              "label": "RSVP",
-              "href": "#"
-            }
-          ],
+          "links": [],
           "socials": {
             "instagram": "https://www.instagram.com/metgamestudio/",
             "linkedin": "https://www.linkedin.com/company/met-games"

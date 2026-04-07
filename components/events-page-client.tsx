@@ -94,9 +94,9 @@ function EventCard({ event }: { event: EventItem }) {
               </p>
             </div>
 
-            <div className="mt-3 flex items-center gap-2 font-display text-lg uppercase tracking-wide text-[#452b57] sm:text-xl md:text-2xl">
+            <div className="mt-3 flex items-center gap-2 text-sm font-medium text-[#452b57] sm:text-base">
               {isExpanded ? <ChevronUp className="h-6 w-6" /> : <ChevronDown className="h-6 w-6" />}
-              <span className="pt-1">More</span>
+              <span>{isExpanded ? "Less" : "More"}</span>
             </div>
           </div>
 

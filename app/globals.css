@@ -159,3 +159,20 @@ svg[data-icon] {
   overflow: visible;
   vertical-align: -0.125em;
 }
+
+@keyframes winner-shine {
+  0% {
+    transform: translateX(-160%) skewX(-18deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.16;
+  }
+  45% {
+    opacity: 0.28;
+  }
+  100% {
+    transform: translateX(220%) skewX(-18deg);
+    opacity: 0;
+  }
+}
