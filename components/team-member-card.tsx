@@ -49,11 +49,11 @@ export function TeamMemberCard({
           type="button"
           onClick={() => setIsExpanded(!isExpanded)}
           aria-expanded={isExpanded}
-          className={`w-full bg-[#a584bf] hover:bg-[#b594cf] transition-colors p-4 sm:p-6 flex items-center gap-3 sm:gap-4 ${
+          className={`w-full bg-[var(--team-dropdown-bg)] hover:bg-[var(--team-dropdown-hover)] transition-colors p-4 sm:p-6 flex items-center gap-3 sm:gap-4 ${
             isExpanded ? "rounded-t-lg" : "rounded-lg"
           }`}
         >
-          <div className="rounded-full overflow-hidden w-20 h-20 sm:w-32 sm:h-32 shrink-0 aspect-square bg-[#9374ac]">
+          <div className="rounded-full overflow-hidden w-20 h-20 sm:w-32 sm:h-32 shrink-0 aspect-square bg-[var(--team-dropdown-avatar-bg)]">
             <Image
               src={member.image || "/placeholder.svg"}
               alt={member.name}
@@ -67,13 +67,13 @@ export function TeamMemberCard({
             />
           </div>
           <div className="flex-1 text-left">
-            <h3 className="text-xl sm:text-2xl md:text-5xl lg:text-6xl font-display font-bold text-[#412c58] leading-none">{member.name}</h3>
+            <h3 className="text-xl sm:text-2xl md:text-5xl lg:text-6xl font-display font-bold text-[var(--team-dropdown-heading)] leading-none">{member.name}</h3>
             <p className="text-lg sm:text-xl md:text-3xl font-display text-white leading-tight">{member.role}</p>
           </div>
           {isExpanded ? (
-            <ChevronUp className="w-6 h-6 sm:w-8 sm:h-8 text-[#4A3B5C]" />
+            <ChevronUp className="w-6 h-6 sm:w-8 sm:h-8 text-[var(--team-dropdown-body)]" />
           ) : (
-            <ChevronDown className="w-6 h-6 sm:w-8 sm:h-8 text-[#4A3B5C]" />
+            <ChevronDown className="w-6 h-6 sm:w-8 sm:h-8 text-[var(--team-dropdown-body)]" />
           )}
         </button>
 
@@ -87,8 +87,8 @@ export function TeamMemberCard({
               isExpanded ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1"
             }`}
           >
-            <div className="bg-[#ae98c0] rounded-b-lg px-4 sm:px-6 pt-4 sm:pt-6 pb-4 sm:pb-6 -mt-2">
-              <p className="text-[#4A3B5C] font-body mb-3 sm:mb-4 text-sm sm:text-base md:text-lg whitespace-pre-line">{member.bio}</p>
+            <div className="bg-[var(--team-dropdown-panel-bg)] rounded-b-lg px-4 sm:px-6 pt-4 sm:pt-6 pb-4 sm:pb-6 -mt-2">
+              <p className="text-[var(--team-dropdown-body)] font-body mb-3 sm:mb-4 text-sm sm:text-base md:text-lg whitespace-pre-line">{member.bio}</p>
               {hasSocials && <SocialLinks socials={member.socials} size="md" />}
             </div>
           </div>
@@ -103,11 +103,11 @@ export function TeamMemberCard({
         type="button"
         onClick={() => setIsExpanded(!isExpanded)}
         aria-expanded={isExpanded}
-        className={`w-full bg-[#a584bf] hover:bg-[#b594cf] transition-colors p-4 sm:p-6 flex flex-col items-center gap-3 sm:gap-4 ${
+        className={`w-full bg-[var(--team-dropdown-bg)] hover:bg-[var(--team-dropdown-hover)] transition-colors p-4 sm:p-6 flex flex-col items-center gap-3 sm:gap-4 ${
           isExpanded ? "rounded-t-lg" : "rounded-lg"
         }`}
       >
-        <div className="rounded-full overflow-hidden w-24 h-24 sm:w-32 sm:h-32 shrink-0 aspect-square bg-[#9374ac]">
+        <div className="rounded-full overflow-hidden w-24 h-24 sm:w-32 sm:h-32 shrink-0 aspect-square bg-[var(--team-dropdown-avatar-bg)]">
           <Image
             src={member.image || "/placeholder.svg"}
             alt={member.name}
@@ -122,7 +122,7 @@ export function TeamMemberCard({
         </div>
         <div className="flex-1 flex flex-col justify-between w-full">
           <div className="flex-1 flex items-center justify-center">
-            <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-display font-bold text-[#412c58] leading-none whitespace-pre-line text-center">
+            <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-display font-bold text-[var(--team-dropdown-heading)] leading-none whitespace-pre-line text-center">
               {member.name.split(" ").length === 2 
                 ? member.name.split(" ").join("\n") 
                 : member.name.split(" ").length === 3 
@@ -135,9 +135,9 @@ export function TeamMemberCard({
           </div>
         </div>
         {isExpanded ? (
-          <ChevronUp className="w-6 h-6 text-[#4A3B5C]" />
+          <ChevronUp className="w-6 h-6 text-[var(--team-dropdown-body)]" />
         ) : (
-          <ChevronDown className="w-6 h-6 text-[#4A3B5C]" />
+          <ChevronDown className="w-6 h-6 text-[var(--team-dropdown-body)]" />
         )}
       </button>
 
@@ -151,8 +151,8 @@ export function TeamMemberCard({
             isExpanded ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1"
           }`}
         >
-          <div className="bg-[#ae98c0] rounded-b-lg px-4 sm:px-6 pt-4 sm:pt-6 pb-4 sm:pb-6 -mt-2">
-            <p className="text-[#4A3B5C] font-body text-sm sm:text-base md:text-lg mb-3 sm:mb-4 whitespace-pre-line">{member.bio}</p>
+          <div className="bg-[var(--team-dropdown-panel-bg)] rounded-b-lg px-4 sm:px-6 pt-4 sm:pt-6 pb-4 sm:pb-6 -mt-2">
+            <p className="text-[var(--team-dropdown-body)] font-body text-sm sm:text-base md:text-lg mb-3 sm:mb-4 whitespace-pre-line">{member.bio}</p>
             {hasSocials && <SocialLinks socials={member.socials} size="sm" centered />}
           </div>
         </div>
