@@ -74,7 +74,7 @@ function EventCard({ event }: { event: EventItem }) {
         type="button"
         onClick={() => setIsExpanded((value) => !value)}
         aria-expanded={isExpanded}
-        className={`w-full bg-[#b395c9] px-4 py-4 text-left transition-colors hover:bg-[#b79ccf] sm:px-5 sm:py-5 ${
+        className={`w-full bg-[#b395c9] px-6 py-6 text-left transition-colors hover:bg-[#b79ccf] sm:px-6 sm:py-6 ${
           isExpanded ? "rounded-t-[22px]" : "rounded-[22px]"
         }`}
       >
@@ -85,7 +85,7 @@ function EventCard({ event }: { event: EventItem }) {
                 {event.title}
               </h2>
               <p
-                className="-mt-1 font-semibold text-2xl leading-none text-white sm:text-lg md:text-4xl"
+                className="mt-1 font-semibold text-xl leading-none text-white sm:text-lg md:text-4xl"
 
               >
                 {event.subtitle}

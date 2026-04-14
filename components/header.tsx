@@ -208,7 +208,7 @@ export function Header() {
                 {!isHome && (
                   <Link
                     href="/"
-                    className="text-lg font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
+                    className="text-lg font-extrabold uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Home
@@ -216,21 +216,21 @@ export function Header() {
                 )}
                 <Link
                   href="/team"
-                  className="text-lg font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
+                  className="text-lg font-extrabold uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Meet the Team
                 </Link>
                 <Link
                   href="/games"
-                  className="text-lg font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
+                  className="text-lg font-extrabold uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Games
                 </Link>
                 <Link
                   href="/events"
-                  className="text-lg font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
+                  className="text-lg font-extrabold uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Events

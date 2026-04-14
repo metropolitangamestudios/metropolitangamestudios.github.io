@@ -67,7 +67,7 @@ export function TeamMemberCard({
             />
           </div>
           <div className="flex-1 text-left">
-            <h3 className="text-xl sm:text-2xl md:text-5xl lg:text-6xl font-display font-bold text-[var(--team-dropdown-heading)] leading-none">{member.name}</h3>
+            <h3 className="mb-1 text-2xl sm:text-2xl md:text-5xl lg:text-6xl font-display font-bold text-[var(--team-dropdown-heading)] leading-none">{member.name}</h3>
             <p className="text-lg sm:text-xl font-semibold md:text-3xl font-display text-white leading-tight">{member.role}</p>
           </div>
           {isExpanded ? (
