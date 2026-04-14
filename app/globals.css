@@ -82,11 +82,11 @@
   --sidebar-ring: oklch(0.5 0.1 285);
 }
 
-/* Added font variables for Brick Sans and Quicksand */
+/* Added font variables for League Spartan and Quicksand */
 @theme inline {
   --font-sans: var(--font-quicksand);
   --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-brick-sans);
+  --font-display: var(--font-league-spartan);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);

@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Quicksand } from "next/font/google"
+import { League_Spartan } from "next/font/google"
 import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
@@ -13,15 +14,12 @@ const quicksand = Quicksand({
   display: "swap",
 })
 
-const brickSans = localFont({
-  src: "../public/fonts/BrickSans-Bold.otf",
-  weight: "700",
-  style: "normal",
-  variable: "--font-brick-sans",
+const leagueSpartan = League_Spartan({
+  subsets: ["latin"],
+  weight: ["100","200","300","400","500","600","700","800","900"],
+  variable: "--font-league-spartan",
   display: "swap",
-  fallback: ["Impact", "Arial Black", "sans-serif"],
 })
-
 export const metadata: Metadata = {
   title: "Met Game Studios",
   description: "Toronto Metropolitan University's student gaming studio creating amazing experiences",
@@ -40,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans ${quicksand.variable} ${brickSans.variable}`}>
+      <body className={`font-sans ${quicksand.variable} ${leagueSpartan.variable}`}>
         <SmoothScroll>
           <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
         </SmoothScroll>
