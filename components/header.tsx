@@ -145,25 +145,25 @@ export function Header() {
               <div className="hidden sm:flex items-center gap-4 md:gap-8">
                 <Link
                   href="/"
-                  className="text-lg md:text-2xl font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
+                  className="text-lg font-extrabold md:text-2xl font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
                 >
                   Home
                 </Link>
                 <Link
                   href="/team"
-                  className="text-lg md:text-2xl font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
+                  className="text-lg font-extrabold md:text-2xl font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
                 >
                   Meet the Team
                 </Link>
                 <Link
                   href="/games"
-                  className="text-lg md:text-2xl font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
+                  className="text-lg font-extrabold md:text-2xl font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
                 >
                   Games
                 </Link>
                 <Link
                   href="/events"
-                  className="text-lg md:text-2xl font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
+                  className="text-lg font-extrabold md:text-2xl font-display uppercase tracking-wide text-[#382450] hover:text-[#6B5580] transition-colors"
                 >
                   Events
                 </Link>

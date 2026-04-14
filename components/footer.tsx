@@ -22,21 +22,21 @@ export function Footer() {
             <div className="hidden sm:block h-px bg-white/30 w-16 lg:w-32"></div>
             <Link
               href="/team"
-              className="text-xl sm:text-3xl lg:text-5xl font-display uppercase tracking-wide text-white hover:text-[#D4C4E8] transition-colors text-center"
+              className="text-xl font-bold sm:text-3xl lg:text-5xl font-display uppercase tracking-wide text-white hover:text-[#D4C4E8] transition-colors text-center"
             >
               Meet the Team
             </Link>
             <div className="hidden sm:block h-px bg-white/30 w-8 lg:w-16"></div>
             <Link
               href="#games"
-              className="text-xl sm:text-3xl lg:text-5xl font-display uppercase tracking-wide text-white hover:text-[#D4C4E8] transition-colors text-center"
+              className="text-xl font-bold sm:text-3xl lg:text-5xl font-display uppercase tracking-wide text-white hover:text-[#D4C4E8] transition-colors text-center"
             >
               Games
             </Link>
             <div className="hidden sm:block h-px bg-white/30 w-8 lg:w-16"></div>
             <Link
               href="/events"
-              className="text-xl sm:text-3xl lg:text-5xl font-display uppercase tracking-wide text-white hover:text-[#D4C4E8] transition-colors text-center"
+              className="text-xl font-bold sm:text-3xl lg:text-5xl font-display uppercase tracking-wide text-white hover:text-[#D4C4E8] transition-colors text-center"
             >
               Events
             </Link>

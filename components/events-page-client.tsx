@@ -1,6 +1,7 @@
 "use client"
 
 import { useMemo, useState } from "react"
+import { motion } from "framer-motion"
 import Image from "next/image"
 import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react"
 import { Footer } from "@/components/footer"
@@ -73,7 +74,7 @@ function EventCard({ event }: { event: EventItem }) {
         type="button"
         onClick={() => setIsExpanded((value) => !value)}
         aria-expanded={isExpanded}
-        className={`w-full bg-[#cba3dd] px-4 py-4 text-left transition-colors hover:bg-[#d3b0e2] sm:px-5 sm:py-5 ${
+        className={`w-full bg-[#b395c9] px-4 py-4 text-left transition-colors hover:bg-[#b79ccf] sm:px-5 sm:py-5 ${
           isExpanded ? "rounded-t-[22px]" : "rounded-[22px]"
         }`}
       >
@@ -84,12 +85,12 @@ function EventCard({ event }: { event: EventItem }) {
                 {event.title}
               </h2>
               <p
-                className="-mt-1 font-display text-2xl leading-none text-white sm:text-lg md:text-5xl"
-                style={outlinedSubtitleStyle}
+                className="-mt-1 font-semibold text-2xl leading-none text-white sm:text-lg md:text-4xl"
+
               >
                 {event.subtitle}
               </p>
-              <p className="mt-3 max-w-xl text-sm leading-relaxed text-[#452b57] sm:text-base">
+              <p className="mt-3 max-w-xl font-semibold text-sm leading-relaxed text-[#452b57] sm:text-base">
                 {event.tagline}
               </p>
             </div>
@@ -168,10 +169,10 @@ export function EventsPageClient() {
       <Header />
 
       <section className="pb-16 pt-24 sm:pb-20 sm:pt-28">
-        <div className="container mx-auto px-4 sm:px-6">
+        <div className="container mx-auto px-4 sm:px-6 ">
           <div className="mx-auto w-full max-w-5xl">
             <div>
-              <div className="mb-4 flex items-center justify-between gap-3 sm:gap-6">
+              <div className="mb-5 flex items-center justify-between gap-3 sm:gap-6">
                 <div className="flex min-w-0 items-center gap-3 sm:flex-wrap sm:gap-6">
                   {eventsPageData.seasons.map((season) => {
                     const isSelected = season.id === selectedSeason.id
@@ -181,11 +182,18 @@ export function EventsPageClient() {
                         key={season.id}
                         type="button"
                         onClick={() => setSelectedSeasonId(season.id)}
-                        className={`shrink-0 px-0 py-0 font-display text-2xl uppercase tracking-wide leading-none transition-colors sm:text-3xl md:text-[2.5rem] ${
+                        className={`relative cursor-pointer shrink-0 px-0 pb-2 pt-0 font-extrabold text-2xl uppercase tracking-wide leading-none transition-colors sm:text-3xl md:text-[2.5rem] ${
                           isSelected ? "text-white" : "text-[#e6a6fd]"
                         }`}
                       >
                         {season.buttonLabel}
+                        {isSelected ? (
+                          <motion.span
+                            layoutId="season-selected-underline"
+                            className="absolute -bottom-0.5 left-0 h-[3px] w-full rounded-full bg-white"
+                            transition={{ type: "spring", stiffness: 450, damping: 34, mass: 0.35 }}
+                          />
+                        ) : null}
                       </button>
                     )
                   })}

@@ -68,7 +68,7 @@ export function TeamMemberCard({
           </div>
           <div className="flex-1 text-left">
             <h3 className="text-xl sm:text-2xl md:text-5xl lg:text-6xl font-display font-bold text-[var(--team-dropdown-heading)] leading-none">{member.name}</h3>
-            <p className="text-lg sm:text-xl md:text-3xl font-display text-white leading-tight">{member.role}</p>
+            <p className="text-lg sm:text-xl font-semibold md:text-3xl font-display text-white leading-tight">{member.role}</p>
           </div>
           {isExpanded ? (
             <ChevronUp className="w-6 h-6 sm:w-8 sm:h-8 text-[var(--team-dropdown-body)]" />
@@ -122,7 +122,7 @@ export function TeamMemberCard({
         </div>
         <div className="flex-1 flex flex-col justify-between w-full">
           <div className="flex-1 flex items-center justify-center">
-            <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-display font-bold text-[var(--team-dropdown-heading)] leading-none whitespace-pre-line text-center">
+            <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-4xl font-display font-extrabold text-[var(--team-dropdown-heading)] leading-none whitespace-pre-line text-center">
               {member.name.split(" ").length === 2 
                 ? member.name.split(" ").join("\n") 
                 : member.name.split(" ").length === 3 
@@ -131,7 +131,7 @@ export function TeamMemberCard({
             </h3>
           </div>
           <div className="text-center mt-2">
-            <p className="text-base sm:text-lg md:text-2xl lg:text-3xl font-display text-white leading-tight">{member.role}</p>
+            <p className="text-base sm:text-lg font-semibold md:text-2xl lg:text-2xl font-display text-white leading-tight">{member.role}</p>
           </div>
         </div>
         {isExpanded ? (
@@ -152,7 +152,7 @@ export function TeamMemberCard({
           }`}
         >
           <div className="bg-[var(--team-dropdown-panel-bg)] rounded-b-lg px-4 sm:px-6 pt-4 sm:pt-6 pb-4 sm:pb-6 -mt-2">
-            <p className="text-[var(--team-dropdown-body)] font-body text-sm sm:text-base md:text-lg mb-3 sm:mb-4 whitespace-pre-line">{member.bio}</p>
+            <p className="text-[var(--team-dropdown-body)] font-medium text-sm sm:text-base md:text-lg mb-3 sm:mb-4 whitespace-pre-line">{member.bio}</p>
             {hasSocials && <SocialLinks socials={member.socials} size="sm" centered />}
           </div>
         </div>
