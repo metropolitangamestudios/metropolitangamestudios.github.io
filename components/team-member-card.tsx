@@ -10,7 +10,7 @@ export interface TeamMember {
   name: string
   role: string
   bio: string
-  image: string
+  image?: string
   imageZoom?: number
   imagePosition?: string
     socials: {
@@ -41,6 +41,7 @@ export function TeamMemberCard({
 }: TeamMemberCardProps) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
   const hasSocials = member.socials && Object.values(member.socials).some(link => link && link !== "#")
+  const imageSrc = member.image?.trim() || "/images/icon.jpeg"
 
   if (layout === "horizontal") {
     return (
@@ -55,7 +56,7 @@ export function TeamMemberCard({
         >
           <div className="rounded-full overflow-hidden w-20 h-20 sm:w-32 sm:h-32 shrink-0 aspect-square bg-[var(--team-dropdown-avatar-bg)]">
             <Image
-              src={member.image || "/placeholder.svg"}
+              src={imageSrc}
               alt={member.name}
               width={imageSize * (member.imageZoom || 1)}
               height={imageSize * (member.imageZoom || 1)}
@@ -109,7 +110,7 @@ export function TeamMemberCard({
       >
         <div className="rounded-full overflow-hidden w-24 h-24 sm:w-32 sm:h-32 shrink-0 aspect-square bg-[var(--team-dropdown-avatar-bg)]">
           <Image
-            src={member.image || "/placeholder.svg"}
+            src={imageSrc}
             alt={member.name}
             width={imageSize * (member.imageZoom || 1)}
             height={imageSize * (member.imageZoom || 1)}

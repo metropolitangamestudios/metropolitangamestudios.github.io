@@ -35,6 +35,28 @@
       "socials": {
         "instagram": "https://www.instagram.com/_stormwhy/?hl=en"
       }
+    },
+    {
+      "id": "queen-zerit",
+      "name": "QUEEN ZERIT",
+      "role": "",
+      "bio": "hi im Queen and i am in the art department ! i like to play and draw silly things. outside of MGS, i mainly make fanart and oc drawings, and comics as well! ",
+      "image": "",
+      "socials": {
+        "website": "https://sillycosmo.carrd.co/ (social media links + rough portfolio)"
+      }
+    },
+    {
+      "id": "shawna-sun",
+      "name": "SHAWNA SUN",
+      "role": "",
+      "bio": "Hi, my name is Shawna! I’m a New Media artist exploring personal experiences through narrative and visual storytelling. I work across various media with a focus on digital design and illustration. Remember that if Chiikawa never gave up on passing the weeding exam, you shouldn’t give up either! ",
+      "image": "",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/shawna-sun/",
+        "instagram": "https://www.instagram.com/indecisivedoggo/",
+        "website": "https://shawnasuns.myportfolio.com/"
+      }
     }
   ],
   "gameDesignTeam": [
@@ -55,6 +77,16 @@
       "bio": "Bio coming soon...",
       "image": "/exec_photos/Daniel.png",
       "socials": {}
+    },
+        {
+      "id": "brady-matthew-bertrand",
+      "name": "BRADY MATTHEW BERTRAND",
+      "role": "",
+      "bio": "Hi I'm Brady. A Performance: Acting major at TMU. Ever since I was a kid I wanted to tell stories and make video games. Look at me now! I get to do both! ",
+      "image": "",
+      "socials": {
+        "instagram": "@brad.bermuda_18"
+      }
     }
   ],
   "programmingTeam": [
@@ -75,6 +107,28 @@
       "socials": {
         "github": "https://github.com/J-talon",
         "linkedin": "https://www.linkedin.com/in/talon-jiang/"
+      }
+    },
+    {
+      "id": "angad-sidhu",
+      "name": "ANGAD SIDHU",
+      "role": "",
+      "bio": "Hey I'm Angad, a second year computer science student who loves programming, gaming, and video editing when I have the time!",
+      "image": "",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/angad-sidhu-as06/",
+        "instagram": "https://www.instagram.com/angad.s6/"
+      }
+    },
+    {
+      "id": "logan-toy",
+      "name": "LOGAN TOY",
+      "role": "",
+      "bio": "Hello, my name's Logan! I've worked on the Front-End here at MGS. I've used Java, Python, C#, and am learning more in Game Dev. Feel free to talk to me about anything music or indie-game related! And just remember, I'm not liable if I end up yapping about UNBEATABLE or KGLW, ...that's on you.",
+      "image": "",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/logan-toy-a70852382/",
+        "github": "https://github.com/logchicha"
       }
     }
   ],
