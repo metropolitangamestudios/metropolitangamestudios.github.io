@@ -8,11 +8,37 @@ import teamDataJson from "@/data/team.json"
 
 const teamData = teamDataJson as {
   directors: TeamMember[]
-  developmentTeam: TeamMember[]
+  artTeam: TeamMember[]
+  gameDesignTeam: TeamMember[]
+  programmingTeam: TeamMember[]
+  soundDesignTeam: TeamMember[]
+  uiTeam: TeamMember[]
+  writingTeam: TeamMember[]
+  qaTeam: TeamMember[]
   operationsTeam: TeamMember[]
 }
 
-const { directors, developmentTeam, operationsTeam } = teamData
+const {
+  directors,
+  artTeam,
+  gameDesignTeam,
+  programmingTeam,
+  soundDesignTeam,
+  uiTeam,
+  writingTeam,
+  qaTeam,
+  operationsTeam,
+} = teamData
+
+const developmentSections: { title: string; members: TeamMember[] }[] = [
+  { title: "ART", members: artTeam },
+  { title: "GAME DESIGN", members: gameDesignTeam },
+  { title: "PROGRAMMING", members: programmingTeam },
+  { title: "SOUND DESIGN", members: soundDesignTeam },
+  { title: "UI", members: uiTeam },
+  { title: "WRITING", members: writingTeam },
+  { title: "QA", members: qaTeam },
+]
 
 export default function MeetTheTeam() {
   return (
@@ -50,27 +76,28 @@ export default function MeetTheTeam() {
         </div>
       </section>
 
-      {/* Development Team Section */}
-      <section className="relative py-10 sm:py-16 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 relative z-10">
-          <h2 className="text-5xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white text-center mb-6 sm:mb-8 leading-none">
-            DEVELOPMENT EXECUTIVES
-          </h2>
+      {developmentSections.map((section) => (
+        <section key={section.title} className="relative py-10 sm:py-16 overflow-hidden">
+          <div className="container mx-auto px-4 sm:px-6 relative z-10">
+            <h2 className="text-5xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white text-center mb-6 sm:mb-8 leading-none">
+              {section.title}
+            </h2>
 
-          <div className="w-full max-w-5xl mx-auto border-t-2 border-white/30 pt-6 sm:pt-8">
-            <MobileTeamGrid members={developmentTeam} />
-            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 items-start">
-              {developmentTeam.map((member) => (
-                <TeamMemberCard
-                  key={member.id}
-                  member={member}
-                  layout="vertical"
-                />
-              ))}
+            <div className="w-full max-w-5xl mx-auto border-t-2 border-white/30 pt-6 sm:pt-8">
+              <MobileTeamGrid members={section.members} />
+              <div className="hidden md:grid [grid-template-columns:repeat(auto-fit,minmax(280px,320px))] justify-center gap-4 sm:gap-6 items-start">
+                {section.members.map((member) => (
+                  <TeamMemberCard
+                    key={member.id}
+                    member={member}
+                    layout="vertical"
+                  />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ))}
 
       {/* Operations Team Section */}
       <section className="relative py-10 sm:py-16 pb-16 sm:pb-24 overflow-hidden">
@@ -81,7 +108,7 @@ export default function MeetTheTeam() {
 
           <div className="w-full max-w-5xl mx-auto border-t-2 border-white/30 pt-6 sm:pt-8">
             <MobileTeamGrid members={operationsTeam} />
-            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 items-start">
+            <div className="hidden md:grid [grid-template-columns:repeat(auto-fit,minmax(280px,320px))] justify-center gap-4 sm:gap-6 items-start">
               {operationsTeam.map((member) => (
                 <TeamMemberCard
                   key={member.id}

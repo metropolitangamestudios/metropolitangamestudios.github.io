@@ -25,7 +25,7 @@
       }
     }
   ],
-  "developmentTeam": [
+  "artTeam": [
     {
       "id": "madeline-hanitijo",
       "name": "MADELINE HANITIJO",
@@ -35,7 +35,50 @@
       "socials": {
         "instagram": "https://www.instagram.com/_stormwhy/?hl=en"
       }
+    }
+  ],
+  "gameDesignTeam": [
+    {
+      "id": "stanislaw-jackowski",
+      "name": "STANISLAW JACKOWSKI",
+      "role": "GAME DESIGN LEAD",
+      "bio": "I'm a Computer Science student who’s into video games, both playing them and now making them. Also modding them as well on the side.",
+      "image": "/exec_photos/Stanislaw.png",
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/stanisław-jackowski-064908353"
+      }
     },
+    {
+      "id": "daniel-trakas",
+      "name": "DANIEL TRAKAS",
+      "role": "GAME DESIGN PRODUCER",
+      "bio": "Bio coming soon...",
+      "image": "/exec_photos/Daniel.png",
+      "socials": {}
+    }
+  ],
+  "programmingTeam": [
+    {
+      "id": "michael-latka",
+      "name": "MICHAEL LATKA",
+      "role": "PROGRAMMING LEAD",
+      "bio": "Bio coming soon...",
+      "image": "/exec_photos/Michael.png",
+      "socials": {}
+    },
+    {
+      "id": "talon-jiang",
+      "name": "TALON JIANG",
+      "role": "PROGRAMMING PRODUCER",
+      "bio": "Ah yes, the Introvert's greatest weakness: \"Tell me about yourself\". You fools! I may still be an introvert, but I have levelled up enough to have gained immunity to your attack! I can now boast about my 5 years of software development experience in Java/Python and my interests in Game Dev, CGI, VR, and Engineering! ",
+      "image": "/exec_photos/Talon.png",
+      "socials": {
+        "github": "https://github.com/J-talon",
+        "linkedin": "https://www.linkedin.com/in/talon-jiang/"
+      }
+    }
+  ],
+  "soundDesignTeam": [
     {
       "id": "ethan-wong",
       "name": "ETHAN WONG",
@@ -43,7 +86,30 @@
       "bio": "Bio coming soon...",
       "image": "/exec_photos/Ethan.png",
       "socials": {}
+    }
+  ],
+  "uiTeam": [
+    {
+      "id": "erich-laylo",
+      "name": "ERICH LAYLO",
+      "role": "UI LEAD",
+      "bio": "Bio coming soon...",
+      "image": "/exec_photos/Erich.png",
+      "socials": {}
     },
+    {
+      "id": "arwen-phan",
+      "name": "ARWEN PHAN",
+      "role": "UI PRODUCER",
+      "bio": "Hi there! I’m Arwen, a 2nd year New Media student and your fellow tech-art enthusiast who happened to wander into the realm of game dev (UIUX things specifically) and fell in love! My favorite games currently are the holy hoyoverse trio, valorant and silent hill f,etc.\n\nCan’t wait to explore, co-lead and produce more awesome things for the team :) and if you also find yourself landing at the intersection between creative graphics and technical implementation, perhaps UI’s the place for you (totally not promoting)!",
+      "image": "/exec_photos/Arwen.png",
+      "socials": {
+        "tiktok": "https://www.tiktok.com/@qp_solacee",
+        "linkedin": "https://www.linkedin.com/in/arwen-phan-69aa02334"
+      }
+    }
+  ],
+  "writingTeam": [
     {
       "id": "sophie-ducharme",
       "name": "SOPHIE DUCHARME",
@@ -63,26 +129,9 @@
       "socials": {
         "linkedin": "https://www.linkedin.com/in/clare-lue-tam-085428255"
       }
-    },
-    {
-      "id": "michael-latka",
-      "name": "MICHAEL LATKA",
-      "role": "PROGRAMMING LEAD",
-      "bio": "Bio coming soon...",
-      "image": "/exec_photos/Michael.png",
-      "socials": {}
-    },
-    {
-      "id": "talon-jiang",
-      "name": "TALON JIANG",
-      "role": "PROGRAMMING PRODUCER",
-      "bio": "Ah yes, the Introvert's greatest weakness: \"Tell me about yourself\". You fools! I may still be an introvert, but I have levelled up enough to have gained immunity to your attack! I can now boast about my 5 years of software development experience in Java/Python and my interests in Game Dev, CGI, VR, and Engineering! ",
-      "image": "/exec_photos/Talon.png",
-      "socials": {
-        "github": "https://github.com/J-talon",
-        "linkedin": "https://www.linkedin.com/in/talon-jiang/"
-      }
-    },
+    }
+  ],
+  "qaTeam": [
     {
       "id": "thomas-imada",
       "name": "THOMAS IMADA",
@@ -101,43 +150,6 @@
         "linkedin": "www.linkedin.com/in/noah-e-friedman",
         "instagram": "https://instagram.com/speelbarrow",
         "website": "https://speely.net"
-      }
-    },
-    {
-      "id": "stanislaw-jackowski",
-      "name": "STANISLAW JACKOWSKI",
-      "role": "GAME DESIGN LEAD",
-      "bio": "I'm a Computer Science student who’s into video games, both playing them and now making them. Also modding them as well on the side.",
-      "image": "/exec_photos/Stanislaw.png",
-      "socials": {
-        "linkedin": "https://www.linkedin.com/in/stanisław-jackowski-064908353"
-      }
-    },
-    {
-      "id": "daniel-trakas",
-      "name": "DANIEL TRAKAS",
-      "role": "GAME DESIGN PRODUCER",
-      "bio": "Bio coming soon...",
-      "image": "/exec_photos/Daniel.png",
-      "socials": {}
-    },
-    {
-      "id": "erich-laylo",
-      "name": "ERICH LAYLO",
-      "role": "UI LEAD",
-      "bio": "Bio coming soon...",
-      "image": "/exec_photos/Erich.png",
-      "socials": {}
-    },
-    {
-      "id": "arwen-phan",
-      "name": "ARWEN PHAN",
-      "role": "UI PRODUCER",
-      "bio": "Hi there! I’m Arwen, a 2nd year New Media student and your fellow tech-art enthusiast who happened to wander into the realm of game dev (UIUX things specifically) and fell in love! My favorite games currently are the holy hoyoverse trio, valorant and silent hill f,etc.\n\nCan’t wait to explore, co-lead and produce more awesome things for the team :) and if you also find yourself landing at the intersection between creative graphics and technical implementation, perhaps UI’s the place for you (totally not promoting)!",
-      "image": "/exec_photos/Arwen.png",
-      "socials": {
-        "tiktok": "https://www.tiktok.com/@qp_solacee",
-        "linkedin": "https://www.linkedin.com/in/arwen-phan-69aa02334"
       }
     }
   ],
