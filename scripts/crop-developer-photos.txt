@@ -1,0 +1,8 @@
+Purpose:
+Make all developer photos match exec photo dimensions so portraits render at the same visual size.
+
+How to use:
+1. Put PNG files in public/developer_photos.
+2. Run:
+   powershell -ExecutionPolicy Bypass -File scripts/crop-developer-photos.ps1
+3. The script replaces each PNG with a 576x768 crop: centered horizontally, bottom preserved.
