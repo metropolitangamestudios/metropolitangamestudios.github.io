@@ -29,7 +29,6 @@ interface EventItem {
   id: string
   title: string
   subtitle: string
-  tagline: string
   description: string
   image: string
   imageAlt: string
@@ -86,12 +85,8 @@ function EventCard({ event }: { event: EventItem }) {
               </h2>
               <p
                 className="mt-1 font-semibold text-xl leading-none text-white sm:text-lg md:text-4xl"
-
               >
                 {event.subtitle}
-              </p>
-              <p className="mt-3 max-w-xl font-semibold text-sm leading-relaxed text-[#452b57] sm:text-base">
-                {event.tagline}
               </p>
             </div>
 
