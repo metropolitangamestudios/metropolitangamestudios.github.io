@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react"
+import { ChevronDown, ChevronUp, ExternalLink, Calendar, MapPin } from "lucide-react"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 import { SocialLinks } from "@/components/social-links"
@@ -62,6 +62,10 @@ const outlinedSubtitleStyle = {
   textShadow: "1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000",
 }
 
+function toTitleCase(s: string) {
+  return s.replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase())
+}
+
 function EventCard({ event }: { event: EventItem }) {
   const [isExpanded, setIsExpanded] = useState(Boolean(event.defaultExpanded))
   const hasSocials = event.socials && Object.values(event.socials).some((link) => link && link !== "#")
@@ -73,37 +77,54 @@ function EventCard({ event }: { event: EventItem }) {
         type="button"
         onClick={() => setIsExpanded((value) => !value)}
         aria-expanded={isExpanded}
-        className={`w-full bg-[#b395c9] px-6 py-6 text-left transition-colors hover:bg-[#b79ccf] sm:px-6 sm:py-6 ${
+        className={`w-full bg-[#b395c9] px-7 py-7 text-left transition-colors hover:bg-[#b79ccf] sm:px-7 sm:py-7 md:px-8 md:py-8 lg:px-9 lg:py-9 ${
           isExpanded ? "rounded-t-[22px]" : "rounded-[22px]"
         }`}
       >
-        <div className="flex items-stretch gap-4 sm:gap-5 md:gap-6">
+        <div className="flex flex-col sm:flex-row items-stretch gap-4 sm:gap-5 md:gap-6">
+          <div className="relative w-full h-42 shrink-0 overflow-hidden rounded-[12px] border-2 border-white/45 sm:h-44 sm:w-44 sm:order-last md:h-56 md:w-56">
+            <Image
+              src={event.image}
+              alt={event.imageAlt}
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 100vw, (max-width: 768px) 176px, 224px"
+            />
+          </div>
+
           <div className="flex min-w-0 flex-1 flex-col justify-between">
             <div>
               <h2 className="font-display text-4xl font-bold leading-none text-[#452b57] sm:text-3xl md:text-7xl">
                 {event.title}
               </h2>
-              <p
-                className="mt-1 font-semibold text-xl leading-none text-white sm:text-lg md:text-4xl"
-              >
-                {event.subtitle}
-              </p>
+              {(() => {
+                const parts = (event.subtitle || "").split("|").map((s) => s.trim())
+                const dateText = parts[0] || ""
+                const locationText = parts[1] || ""
+                const displayDate = dateText ? toTitleCase(dateText) : ""
+                const displayLocation = locationText ? toTitleCase(locationText) : ""
+
+                return (
+                  <div className="mt-2 flex flex-col gap-1">
+                    <div className="flex items-center gap-3">
+                      <Calendar className="h-4 w-4 sm:h-4 sm:w-4 md:h-6 md:w-6 text-white" />
+                      <span className="font-semibold text-xl leading-none sm:text-base md:text-2xl text-white">{displayDate}</span>
+                    </div>
+                    {locationText ? (
+                      <div className="flex items-center gap-3">
+                        <MapPin className="h-4 w-4 sm:h-4 sm:w-4 md:h-6 md:w-6 text-white" />
+                        <span className="font-semibold text-xl leading-none sm:text-base md:text-2xl text-white">{displayLocation}</span>
+                      </div>
+                    ) : null}
+                  </div>
+                )
+              })()}
             </div>
 
             <div className="mt-3 flex items-center gap-2 text-sm font-medium text-[#452b57] sm:text-base">
               {isExpanded ? <ChevronUp className="h-6 w-6" /> : <ChevronDown className="h-6 w-6" />}
               <span>{isExpanded ? "Less" : "More"}</span>
             </div>
-          </div>
-
-          <div className="relative h-36 w-36 shrink-0 overflow-hidden rounded-[16px] border-2 border-white/45 sm:h-44 sm:w-44 md:h-56 md:w-56">
-            <Image
-              src={event.image}
-              alt={event.imageAlt}
-              fill
-              className="object-cover"
-              sizes="(max-width: 640px) 144px, (max-width: 768px) 176px, 224px"
-            />
           </div>
         </div>
       </button>
@@ -118,7 +139,7 @@ function EventCard({ event }: { event: EventItem }) {
             isExpanded ? "translate-y-0 opacity-100" : "-translate-y-1 opacity-0"
           }`}
         >
-          <div className="rounded-b-[22px] bg-[#e2c7ef] px-4 pb-5 pt-4 text-[#452b57] sm:px-5 sm:pb-6 sm:pt-5">
+          <div className="rounded-b-[22px] bg-[#e2c7ef] px-5 pb-6 pt-5 text-[#452b57] sm:px-6 sm:pb-7 sm:pt-6 md:px-7 md:pb-8 md:pt-7 lg:px-8 lg:pb-9 lg:pt-8">
             <p className="text-sm leading-relaxed sm:text-base">{event.description}</p>
 
             {hasLinks ? (
@@ -167,8 +188,26 @@ export function EventsPageClient() {
         <div className="container mx-auto px-4 sm:px-6 ">
           <div className="mx-auto w-full max-w-5xl">
             <div>
-              <div className="mb-5 flex items-center justify-between gap-3 sm:gap-6">
-                <div className="flex min-w-0 items-center gap-3 sm:flex-wrap sm:gap-6">
+              <div className="mb-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+                {/*
+                <div className="relative w-full shrink-0 sm:w-[140px] sm:max-w-[170px] sm:order-last">
+                  <select
+                    aria-label="Archive"
+                    defaultValue={eventsPageData.archiveOptions[0]?.id}
+                  className="w-full appearance-none rounded-[14px] border-0 bg-[#cba3dd] px-3 py-2 pr-9 font-display text-xl uppercase tracking-wide text-[#452b57] outline-none sm:text-2xl"
+                    disabled={eventsPageData.archiveOptions.length <= 1}
+                  >
+                    {eventsPageData.archiveOptions.map((option) => (
+                      <option key={option.id} value={option.id}>
+                        {option.label}
+                      </option>
+                    ))}
+                  </select>
+                  <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-6 w-6 -translate-y-1/2 text-[#452b57]" />
+                </div>
+                */}
+
+                <div className="flex min-w-0 flex-wrap items-center gap-3 sm:gap-6 sm:order-first">
                   {eventsPageData.seasons.map((season) => {
                     const isSelected = season.id === selectedSeason.id
 
@@ -192,22 +231,6 @@ export function EventsPageClient() {
                       </button>
                     )
                   })}
-                </div>
-
-                <div className="relative w-[140px] shrink-0 sm:w-full sm:max-w-[170px]">
-                  <select
-                    aria-label="Archive"
-                    defaultValue={eventsPageData.archiveOptions[0]?.id}
-                  className="w-full appearance-none rounded-[14px] border-0 bg-[#cba3dd] px-3 py-2 pr-9 font-display text-xl uppercase tracking-wide text-[#452b57] outline-none sm:text-2xl"
-                    disabled={eventsPageData.archiveOptions.length <= 1}
-                  >
-                    {eventsPageData.archiveOptions.map((option) => (
-                      <option key={option.id} value={option.id}>
-                        {option.label}
-                      </option>
-                    ))}
-                  </select>
-                  <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-6 w-6 -translate-y-1/2 text-[#452b57]" />
                 </div>
               </div>
 

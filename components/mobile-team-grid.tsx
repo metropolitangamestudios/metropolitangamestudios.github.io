@@ -29,6 +29,8 @@ export function MobileTeamGrid({ members }: MobileTeamGridProps) {
             <div className="grid grid-cols-2 gap-4 items-start">
               {row.map((member) => {
                 const isExpanded = expandedId === member.id
+                const imageSrc = member.image?.trim()
+                const normalizedImageSrc = imageSrc && imageSrc !== "/placeholder.svg" ? imageSrc : "/images/icon.jpeg"
 
                 return (
                   <button
@@ -41,7 +43,7 @@ export function MobileTeamGrid({ members }: MobileTeamGridProps) {
                     <div className="flex flex-col items-center gap-3">
                       <div className="relative h-24 w-24 overflow-hidden rounded-full bg-[var(--team-dropdown-avatar-bg)]">
                         <Image
-                          src={member.image || "/placeholder.svg"}
+                          src={normalizedImageSrc}
                           alt={member.name}
                           fill
                           className="object-cover"
