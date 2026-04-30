@@ -42,11 +42,27 @@ const developmentSections: { title: string; members: TeamMember[] }[] = [
 
 export default function MeetTheTeam() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[linear-gradient(180deg,_#5a3a72_0%,_#4d3163_38%,_#452b57_72%,_#3e254f_100%)]">
+    <main className="relative isolate min-h-screen overflow-x-hidden">
+      <div className="fixed inset-0 -z-20 overflow-hidden pointer-events-none">
+        <video
+          className="h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src="/images/mgs_website_bg.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div className="fixed inset-0 -z-10 bg-[rgba(69,43,87,0.62)] pointer-events-none" />
+
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-20 sm:pt-24 pb-6 sm:pb-8 overflow-hidden">
+      <section className="relative pt-20 sm:pt-24 pb-6 sm:pb-8 overflow-hidden z-10">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <h1 className="text-6xl sm:text-6xl md:text-8xl lg:text-9xl font-display font-bold text-[#dca8ff] text-center mb-0 leading-none">
             MEET THE TEAM!
@@ -55,7 +71,7 @@ export default function MeetTheTeam() {
       </section>
 
       {/* Directors Section */}
-      <section className="relative pt-0 pb-10 sm:pb-16 overflow-hidden">
+      <section className="relative pt-0 pb-10 sm:pb-16 overflow-hidden z-10">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <h2 className="text-5xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white text-center mb-6 sm:mb-8 leading-none">
             DIRECTORS
@@ -76,47 +92,101 @@ export default function MeetTheTeam() {
         </div>
       </section>
 
-      {developmentSections.map((section) => (
-        <section key={section.title} className="relative py-10 sm:py-16 overflow-hidden">
-          <div className="container mx-auto px-4 sm:px-6 relative z-10">
-            <h2 className="text-5xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white text-center mb-6 sm:mb-8 leading-none">
-              {section.title}
-            </h2>
+      {developmentSections.map((section) => {
+        const leads = section.members.filter((member) => member.role && member.role.trim() !== "")
+        const nonLeads = section.members.filter((member) => !member.role || member.role.trim() === "")
 
-            <div className="w-full max-w-5xl mx-auto border-t-2 border-white/30 pt-6 sm:pt-8">
-              <MobileTeamGrid members={section.members} />
-              <div className="hidden md:grid [grid-template-columns:repeat(auto-fit,minmax(280px,320px))] justify-center gap-4 sm:gap-6 items-start">
-                {section.members.map((member) => (
-                  <TeamMemberCard
-                    key={member.id}
-                    member={member}
-                    layout="vertical"
-                  />
-                ))}
+        return (
+          <section key={section.title} className="relative py-10 sm:py-16 overflow-hidden z-10">
+            <div className="container mx-auto px-4 sm:px-6 relative z-10">
+              <h2 className="text-5xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white text-center mb-6 sm:mb-8 leading-none">
+                {section.title}
+              </h2>
+
+              <div className="w-full max-w-5xl mx-auto border-t-2 border-white/30 pt-6 sm:pt-8">
+                {leads.length > 0 && (
+                  <>
+                    <MobileTeamGrid members={leads} />
+                    <div className="hidden md:grid [grid-template-columns:repeat(auto-fit,minmax(280px,320px))] justify-center gap-4 sm:gap-6 items-start">
+                      {leads.map((member) => (
+                        <TeamMemberCard
+                          key={member.id}
+                          member={member}
+                          layout="vertical"
+                        />
+                      ))}
+                    </div>
+                  </>
+                )}
+
+                {nonLeads.length > 0 && (
+                  <>
+                    {leads.length > 0 && <div className="my-8 sm:my-12" />}
+                    <MobileTeamGrid members={nonLeads} />
+                    <div className="hidden md:grid [grid-template-columns:repeat(auto-fit,minmax(280px,320px))] justify-center gap-4 sm:gap-6 items-start">
+                      {nonLeads.map((member) => (
+                        <TeamMemberCard
+                          key={member.id}
+                          member={member}
+                          layout="vertical"
+                        />
+                      ))}
+                    </div>
+                  </>
+                )}
               </div>
             </div>
-          </div>
-        </section>
-      ))}
+          </section>
+        )
+      })}
 
       {/* Operations Team Section */}
-      <section className="relative py-10 sm:py-16 pb-16 sm:pb-24 overflow-hidden">
+      <section className="relative py-10 sm:py-16 pb-16 sm:pb-24 overflow-hidden z-10">
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <h2 className="text-5xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white text-center mb-6 sm:mb-8 leading-none">
             OPERATIONS TEAM
           </h2>
 
           <div className="w-full max-w-5xl mx-auto border-t-2 border-white/30 pt-6 sm:pt-8">
-            <MobileTeamGrid members={operationsTeam} />
-            <div className="hidden md:grid [grid-template-columns:repeat(auto-fit,minmax(280px,320px))] justify-center gap-4 sm:gap-6 items-start">
-              {operationsTeam.map((member) => (
-                <TeamMemberCard
-                  key={member.id}
-                  member={member}
-                  layout="vertical"
-                />
-              ))}
-            </div>
+            {(() => {
+              const leads = operationsTeam.filter((member) => member.role && member.role.trim() !== "")
+              const nonLeads = operationsTeam.filter((member) => !member.role || member.role.trim() === "")
+
+              return (
+                <>
+                  {leads.length > 0 && (
+                    <>
+                      <MobileTeamGrid members={leads} />
+                      <div className="hidden md:grid [grid-template-columns:repeat(auto-fit,minmax(280px,320px))] justify-center gap-4 sm:gap-6 items-start">
+                        {leads.map((member) => (
+                          <TeamMemberCard
+                            key={member.id}
+                            member={member}
+                            layout="vertical"
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
+
+                  {nonLeads.length > 0 && (
+                    <>
+                      {leads.length > 0 && <div className="my-8 sm:my-12" />}
+                      <MobileTeamGrid members={nonLeads} />
+                      <div className="hidden md:grid [grid-template-columns:repeat(auto-fit,minmax(280px,320px))] justify-center gap-4 sm:gap-6 items-start">
+                        {nonLeads.map((member) => (
+                          <TeamMemberCard
+                            key={member.id}
+                            member={member}
+                            layout="vertical"
+                          />
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </>
+              )
+            })()}
           </div>
         </div>
       </section>

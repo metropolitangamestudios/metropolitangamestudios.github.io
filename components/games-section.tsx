@@ -83,7 +83,7 @@ export function GamesSection() {
   }, [])
 
   return (
-    <section ref={ref} className="bg-[#412c58] pb-12 pt-24 text-white overflow-hidden sm:pb-24 sm:pt-32 md:pt-40">
+    <section ref={ref} className="relative pb-12 pt-24 text-white overflow-hidden sm:pb-24 sm:pt-32 md:pt-40">
       <div className="container mx-auto px-4 sm:px-6">
         <div ref={contentRef} className="grid items-center gap-6 md:grid-cols-2 sm:gap-12">
           <motion.div

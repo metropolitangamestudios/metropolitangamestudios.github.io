@@ -6,12 +6,30 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#412c58] overflow-x-hidden">
-      <Header />
-      <HeroSection />
-      <AboutSection />
-      <GamesSection />
-      <Footer />
+    <main className="relative isolate min-h-screen overflow-x-hidden">
+      <div className="fixed inset-0 -z-20 overflow-hidden pointer-events-none">
+        <video
+          className="h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src="/images/mgs_website_bg.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div className="fixed inset-0 -z-10 bg-[rgba(69,43,87,0.62)] pointer-events-none" />
+
+      <div className="relative z-10">
+        <Header />
+        <HeroSection />
+        <AboutSection />
+        <GamesSection />
+        <Footer />
+      </div>
     </main>
   )
 }

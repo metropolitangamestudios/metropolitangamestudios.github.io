@@ -11,7 +11,6 @@ export function HeroSection() {
     offset: ["start start", "end start"],
   })
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"])
   const logoY = useTransform(scrollYProgress, [0, 1], ["-50%", "10%"])
 
   return (
@@ -19,22 +18,6 @@ export function HeroSection() {
       ref={containerRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 z-0"
     >
-      <motion.div 
-        className="absolute inset-0"
-        style={{ y: backgroundY }}
-      >
-        <Image
-          src="/images/hero.png"
-          alt="Met Game Studios - Gaming cityscape with controller building"
-          fill
-          className="object-cover scale-110"
-          priority
-          sizes="100vw"
-        />
-      </motion.div>
-
-      {/* Optional overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/20" />
 
       <motion.div
         className="absolute left-1/2 top-1/2 h-1/2 w-[88%] -translate-x-1/2 sm:left-8 sm:w-full sm:translate-x-0 md:left-28 sm:h-2/3 z-10"

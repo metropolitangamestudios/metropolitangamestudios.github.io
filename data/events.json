@@ -13,40 +13,76 @@
       "titleLabel": "FALL 2025",
       "events": [
         {
+          "id": "redbull-hub-social",
+          "title": "REDBULL GAMING HUB SOCIAL & TUTORIALS",
+          "subtitle": "AUG. 25 | REDBULL GAMING HUB",
+          "description": "We hung out at the hub, learned about Unity, creating art for games, and held an info session about Met Game Studios!",
+          "image": "/images/events/redbull_2025.jpg",
+          "imageAlt": ""
+        },
+        {
+          "id": "club-fair",
+          "title": "MET GAMES CLUB FAIR",
+          "subtitle": "AUG. 26 | ROGERS COMMUNICATION CENTER (RCC) - LOBBY",
+          "description": "Campus groups at our fair booths in the RCC lobby",
+          "image": "/images/events/clubfair_2025.jpg",
+          "imageAlt": ""
+        },
+        {
+          "id": "orientation",
+          "title": "ORIENTATION IN THE CATALYST!",
+          "subtitle": "SEPT. 9 | ROGERS COMMUNICATION CENTER (RCC) - THE CATALYST",
+          "description": "Our first open call meeting to join, learn more details about us, and meet fellow members of the studio.",
+          "image": "/images/events/orientation_2025.jpg",
+          "imageAlt": ""
+        },
+        {
+          "id": "pitch-day",
+          "title": "PITCH DAY - GAME CONCEPT VOTING FAIR",
+          "subtitle": "SEPT. 22 | ROGERS COMMUNICATION CENTER (RCC) - THE CATALYST",
+          "description": "Present your game concepts for a chance to be selected! The event was held in a booth-style presentation format at the Catalyst. The winning game concept to be developed for the year was announced: Beats & Brains!",
+          "image": "/images/events/pitchday_2025.jpg",
+          "imageAlt": ""
+        },
+        {
+          "id": "picture-day",
+          "title": "PICTURE DAY! FREE STUDIO HEADSHOTS",
+          "subtitle": "SEPT. 30 | ROGERS COMMUNICATION CENTER (RCC) - THE CATALYST",
+          "description": "Free headshot event taken by a professional photographer!",
+          "image": "/images/events/pictureday_2025.jpg",
+          "imageAlt": ""
+        },
+        {
+          "id": "stefan-zamfir-lecture",
+          "title": "INDUSTRY GUEST LECTURE WITH STEFAN ZAMFIR",
+          "subtitle": "OCT. 24 | VIRTUAL",
+          "description": "Our first industry guest lecture! He has been in the industry for two decades as a game designer, producer, and operations manager through his dedicated work at Gameloft, and presented his incredible lecture: \"FAIL FAST, PLAY FASTER: The Prototyping Journey in Game Design\"",
+          "image": "/images/events/stefanzamfir_2025.png",
+          "imageAlt": ""
+        },
+        {
+          "id": "robert-butts-lecture",
+          "title": "INDUSTRY GUEST LECTURE WITH ROBERT BUTTS",
+          "subtitle": "NOV. 10 | ROGERS COMMUNICATION CENTER (RCC) - THE CATALYST",
+          "description": "Industry guest lecturer- Rob is a game developer with experience in QA, production, and studio management.",
+          "image": "/images/events/robertbutts_2025.jpg",
+          "imageAlt": ""
+        },
+        {
+          "id": "games-night",
+          "title": "GAMES NIGHT! & FALL GAME JAM INFO SESSION",
+          "subtitle": "NOV. 14 | VIRTUAL",
+          "description": "Participants joined us for an evening of fun as we played games (as voted on in Discord)! We also conducted an information session about our upcoming game jam.",
+          "image": "/images/events/gamesnight_2025.jpg",
+          "imageAlt": ""
+        },
+        {
           "id": "fall-game-jam",
-          "title": "FALL 2025 GAME JAM",
-          "subtitle": "OCTOBER 17-19, 2025 | MAC 205",
-          "description": "Spend the weekend building a fresh concept with artists, designers, writers, and programmers from across the club. We'll kick things off with theme reveals, mentoring check-ins, and a final showcase at the end of the jam.",
-          "image": "/images/KDS07302.jpg",
-          "imageAlt": "Students gathered together during a Met Game Studios event",
-          "socials": {
-            "twitter": "https://x.com/metgamestudio",
-            "discord": "https://discord.com/invite/MDc6Cf7QFz",
-            "youtube": "https://www.youtube.com/@metgamestudio",
-            "twitch": "https://www.twitch.tv/metgamestudio"
-          },
-          "defaultExpanded": true
-        },
-        {
-          "id": "fall-career-panel",
-          "title": "FALL 2025 CAREER PANEL",
-          "subtitle": "OCTOBER 24, 2025 | MAC 205",
-          "description": "A moderated conversation with alumni and guest speakers covering portfolio strategy, networking, and first-job expectations. Bring your questions and stick around afterward for an informal mixer.",
-          "image": "/images/KDS07106.jpg",
-          "imageAlt": "Students listening during a community event",
-          "socials": {
-            "discord": "https://discord.com/invite/MDc6Cf7QFz",
-            "linkedin": "https://www.linkedin.com/company/met-games"
-          }
-        },
-        {
-          "id": "fall-showcase-night",
-          "title": "FALL 2025 SHOWCASE NIGHT",
-          "subtitle": "DECEMBER 4, 2025 | RCC 204",
-          "description": "We'll close the term with short presentations, playable builds, and a community hangout. Expect snapshots from ongoing projects, team introductions, and a look ahead to the next semester.",
-          "image": "/images/KDS06990.jpg",
-          "imageAlt": "Crowd attending a student showcase",
-          "links": []
+          "title": "FALL GAME JAM",
+          "subtitle": "DEC. 9 - DEC. 30 | BAMPOT HOUSE - 201 HARBORD ST, TORONTO",
+          "description": "Throughout the month, participants worked diligently to develop their game prototypes, each aligning with the designated theme. They utilized various development software to bring their creations to life, ensuring they were ready for submission on itch.io by the deadline. As a public event at Bampot we had many incomers vote for their favorite game (and potentially the winning game!). Bampot hosted a lively event with karaoke, games, tea, cocktails, and plenty of social fun, making it a memorable occasion for everyone involved.",
+          "image": "/images/events/fallgamejam_2025.jpg",
+          "imageAlt": ""
         }
       ]
     },
@@ -56,66 +92,28 @@
       "titleLabel": "WINTER 2026",
       "events": [
         {
-          "id": "winter-kickoff",
-          "title": "WINTER 2026 CLUB KICKOFF",
-          "subtitle": "JANUARY 15, 2026 | LIB 72",
-          "description": "This kickoff session introduces the semester's initiatives, upcoming collaboration opportunities, and event calendar. New and returning members can meet leads, hear project pitches, and learn how to get involved right away.",
-          "image": "/images/PS14.jpg",
-          "imageAlt": "Attendees speaking at a kickoff event",
-          "links": [
-            {
-              "label": "Discord",
-              "href": "https://discord.com/invite/MDc6Cf7QFz"
-            }
-          ],
-          "socials": {
-            "discord": "https://discord.com/invite/MDc6Cf7QFz",
-            "instagram": "https://www.instagram.com/metgamestudio/",
-            "youtube": "https://www.youtube.com/@metgamestudio"
-          },
-          "defaultExpanded": true
-        },
-        {
-          "id": "winter-playtest-lab",
-          "title": "WINTER 2026 PLAYTEST LAB",
-          "subtitle": "FEBRUARY 6, 2026 | POD 250",
-          "description": "An open-format playtest night focused on iteration. Teams can rotate through feedback stations, compare notes on usability and pacing, and leave with actionable next steps for their prototypes.",
-          "image": "/images/PS15.jpg",
-          "imageAlt": "Students participating in a playtest session",
-          "socials": {
-            "twitch": "https://www.twitch.tv/metgamestudio",
-            "discord": "https://discord.com/invite/MDc6Cf7QFz"
-          }
-        },
-        {
           "id": "winter-game-jam",
-          "title": "WINTER 2026 GAME JAM",
-          "subtitle": "FEBRUARY 12, 2026",
-          "description": "The Winter 2026 Game Jam is a fast-paced club event focused on collaboration, creativity, and rapid prototyping. Form a team, explore an idea, and share your work with the community at the end of the jam.",
-          "image": "/images/winter_game_jam_2026.png",
-          "imageAlt": "Winter 2026 Game Jam promotional graphic",
-          "links": [
-            {
-              "label": "Itch.io",
-              "href": "https://metgamestudio.itch.io/"
-            }
-          ],
-          "socials": {
-            "discord": "https://discord.com/invite/MDc6Cf7QFz"
-          }
+          "title": "BMO NXT LVL WINTER GAME JAM",
+          "subtitle": "FEB. 13 - FEB. 20 | SHELDON & TRACY LEVY STUDENT LEARNING CENTRE (SLC) - FLOOR 6",
+          "description": "Fifteen teams registered to showcase a game, setting a new record at our studio! It was gearing up to be our busiest game jam yet. Each podium winner received a cash prize and a chance to join us at the Level Up Showcase 2026, where they had their very own booth to display their amazing game! Every vote truly mattered!",
+          "image": "/images/events/wintergamejam_2026.jpg",
+          "imageAlt": ""
         },
         {
-          "id": "winter-studio-social",
-          "title": "WINTER 2026 STUDIO SOCIAL",
-          "subtitle": "MARCH 12, 2026 | SLC 308",
-          "description": "Part mixer, part mini-showcase, this social is designed to help people meet across disciplines. Drop in for conversation, community updates, and a few lighthearted activities between project sprints.",
-          "image": "/images/KDS07106.jpg",
-          "imageAlt": "Students chatting at a social gathering",
-          "links": [],
-          "socials": {
-            "instagram": "https://www.instagram.com/metgamestudio/",
-            "linkedin": "https://www.linkedin.com/company/met-games"
-          }
+          "id": "roblox-workshop",
+          "title": "ROBLOX WORKSHOP",
+          "subtitle": "MAR. 19 & MAR. 26 | REDBULL GAMING HUB",
+          "description": "Open to all students and experience levels, these workshops introduced the essentials of Roblox Studio development and environment design. Using Roblox Studio, students learned the basics of design, navigation, building, and lighting, and published their own playable environment and user-generated content.",
+          "image": "/images/events/robloxworkshop_2026.jpg",
+          "imageAlt": ""
+        },
+        {
+          "id": "level-up-showcase",
+          "title": "LEVEL UP SHOWCASE",
+          "subtitle": "APR. 7 | SHERATON CENTRE",
+          "description": "After a school year of hard work developing Beats & Brains, we took our game and the game jam winners to the biggest student video game showcase in Ontario- where we took home a trophy for 2nd place in the People's Choice category (by Ubisoft)",
+          "image": "/images/events/levelupshowcase_2026.jpg",
+          "imageAlt": ""
         }
       ]
     }

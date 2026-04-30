@@ -46,16 +46,14 @@ export function TeamMemberCard({
 
   if (layout === "horizontal") {
     return (
-      <div className="w-full">
+      <div className="w-full overflow-hidden rounded-[24px] border border-white/12 bg-[#f1e6f8]/10 shadow-[0_22px_50px_rgba(21,8,31,0.2)] backdrop-blur-sm">
         <button
           type="button"
           onClick={() => setIsExpanded(!isExpanded)}
           aria-expanded={isExpanded}
-          className={`w-full bg-[var(--team-dropdown-bg)] hover:bg-[var(--team-dropdown-hover)] transition-colors p-4 sm:p-6 flex items-center gap-3 sm:gap-4 ${
-            isExpanded ? "rounded-t-lg" : "rounded-lg"
-          }`}
+          className={`w-full transition-colors p-4 sm:p-6 flex items-center gap-3 sm:gap-4`}
         >
-          <div className="rounded-full overflow-hidden w-20 h-20 sm:w-32 sm:h-32 shrink-0 aspect-square bg-[var(--team-dropdown-avatar-bg)]">
+          <div className="rounded-full overflow-hidden w-20 h-20 sm:w-32 sm:h-32 shrink-0 aspect-square bg-[#3a214d]">
             <Image
               src={normalizedImageSrc}
               alt={member.name}
@@ -69,13 +67,13 @@ export function TeamMemberCard({
             />
           </div>
           <div className="flex-1 text-left">
-            <h3 className="mb-1 text-2xl sm:text-2xl md:text-5xl lg:text-6xl font-display font-bold text-[var(--team-dropdown-heading)] leading-none">{member.name}</h3>
-            <p className="text-lg sm:text-xl font-semibold md:text-3xl font-display text-white leading-tight">{member.role}</p>
+            <h3 className="mb-1 text-2xl sm:text-2xl md:text-5xl lg:text-6xl font-display font-bold text-white leading-none">{member.name}</h3>
+            <p className="text-base font-medium uppercase tracking-[0.24em] text-[#f3c6ff] sm:text-lg">{member.role}</p>
           </div>
           {isExpanded ? (
-            <ChevronUp className="w-6 h-6 sm:w-8 sm:h-8 text-[var(--team-dropdown-body)]" />
+            <ChevronUp className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
           ) : (
-            <ChevronDown className="w-6 h-6 sm:w-8 sm:h-8 text-[var(--team-dropdown-body)]" />
+            <ChevronDown className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
           )}
         </button>
 
@@ -89,8 +87,8 @@ export function TeamMemberCard({
               isExpanded ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1"
             }`}
           >
-            <div className="bg-[var(--team-dropdown-panel-bg)] rounded-b-lg px-4 sm:px-6 pt-4 sm:pt-6 pb-4 sm:pb-6 -mt-2">
-              <p className="text-[var(--team-dropdown-body)] font-body mb-3 sm:mb-4 text-sm sm:text-base md:text-lg whitespace-pre-line">{member.bio}</p>
+            <div className="bg-[#f1e6f8]/70 rounded-b-[24px] border-t border-white/12 px-4 sm:px-6 pt-4 sm:pt-6 pb-4 sm:pb-6">
+              <p className="text-[#452b57] font-body mb-3 sm:mb-4 text-sm sm:text-base md:text-lg whitespace-pre-line">{member.bio}</p>
               {hasSocials && <SocialLinks socials={member.socials} size="md" />}
             </div>
           </div>
@@ -100,16 +98,14 @@ export function TeamMemberCard({
   }
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col overflow-hidden rounded-[24px] border border-white/12 bg-[#f1e6f8]/10 shadow-[0_22px_50px_rgba(21,8,31,0.2)] backdrop-blur-sm">
       <button
         type="button"
         onClick={() => setIsExpanded(!isExpanded)}
         aria-expanded={isExpanded}
-        className={`w-full bg-[var(--team-dropdown-bg)] hover:bg-[var(--team-dropdown-hover)] transition-colors p-4 sm:p-6 flex flex-col items-center gap-3 sm:gap-4 ${
-          isExpanded ? "rounded-t-lg" : "rounded-lg"
-        }`}
+        className={`w-full transition-colors p-4 sm:p-6 flex flex-col items-center gap-3 sm:gap-4`}
       >
-        <div className="rounded-full overflow-hidden w-24 h-24 sm:w-32 sm:h-32 shrink-0 aspect-square bg-[var(--team-dropdown-avatar-bg)]">
+        <div className="rounded-full overflow-hidden w-24 h-24 sm:w-32 sm:h-32 shrink-0 aspect-square bg-[#3a214d]">
           <Image
             src={normalizedImageSrc}
             alt={member.name}
@@ -124,7 +120,7 @@ export function TeamMemberCard({
         </div>
         <div className="flex-1 flex flex-col justify-between w-full">
           <div className="flex-1 flex items-center justify-center">
-            <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-4xl font-display font-extrabold text-[var(--team-dropdown-heading)] leading-none whitespace-pre-line text-center">
+            <h3 className="text-2xl sm:text-3xl md:text-5xl lg:text-4xl font-display font-extrabold text-white leading-none whitespace-pre-line text-center">
               {member.name.split(" ").length === 2 
                 ? member.name.split(" ").join("\n") 
                 : member.name.split(" ").length === 3 
@@ -133,13 +129,13 @@ export function TeamMemberCard({
             </h3>
           </div>
           <div className="text-center mt-2">
-            <p className="text-base sm:text-lg font-semibold md:text-2xl lg:text-2xl font-display text-white leading-tight">{member.role}</p>
+            <p className="text-base font-medium uppercase tracking-[0.24em] text-[#f3c6ff] sm:text-lg">{member.role}</p>
           </div>
         </div>
         {isExpanded ? (
-          <ChevronUp className="w-6 h-6 text-[var(--team-dropdown-body)]" />
+          <ChevronUp className="w-6 h-6 text-white" />
         ) : (
-          <ChevronDown className="w-6 h-6 text-[var(--team-dropdown-body)]" />
+          <ChevronDown className="w-6 h-6 text-white" />
         )}
       </button>
 
@@ -153,8 +149,8 @@ export function TeamMemberCard({
             isExpanded ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1"
           }`}
         >
-          <div className="bg-[var(--team-dropdown-panel-bg)] rounded-b-lg px-4 sm:px-6 pt-4 sm:pt-6 pb-4 sm:pb-6 -mt-2">
-            <p className="text-[var(--team-dropdown-body)] font-medium text-sm sm:text-base md:text-lg mb-3 sm:mb-4 whitespace-pre-line">{member.bio}</p>
+          <div className="bg-[#f1e6f8]/60 rounded-b-[24px] border-t border-white/12 px-4 sm:px-6 pt-4 sm:pt-6 pb-4 sm:pb-6">
+            <p className="text-[#452b57] font-medium text-sm sm:text-base md:text-lg mb-3 sm:mb-4 whitespace-pre-line">{member.bio}</p>
             {hasSocials && <SocialLinks socials={member.socials} size="sm" centered />}
           </div>
         </div>

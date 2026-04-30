@@ -38,10 +38,10 @@ export function MobileTeamGrid({ members }: MobileTeamGridProps) {
                     type="button"
                     onClick={() => setExpandedId((current) => (current === member.id ? null : member.id))}
                     aria-expanded={isExpanded}
-                    className="w-full rounded-lg bg-[var(--team-dropdown-bg)] p-4 transition-colors hover:bg-[var(--team-dropdown-hover)]"
+                    className="w-full rounded-[24px] border border-white/12 bg-[#f1e6f8]/10 shadow-[0_22px_50px_rgba(21,8,31,0.2)] backdrop-blur-sm p-4 transition-colors"
                   >
                     <div className="flex flex-col items-center gap-3">
-                      <div className="relative h-24 w-24 overflow-hidden rounded-full bg-[var(--team-dropdown-avatar-bg)]">
+                      <div className="relative h-24 w-24 overflow-hidden rounded-full bg-[#3a214d]">
                         <Image
                           src={normalizedImageSrc}
                           alt={member.name}
@@ -55,19 +55,19 @@ export function MobileTeamGrid({ members }: MobileTeamGridProps) {
                       </div>
 
                       <div className="w-full text-center">
-                        <h3 className="font-display text-2xl font-bold leading-none whitespace-pre-line text-[var(--team-dropdown-heading)]">
+                        <h3 className="font-display text-2xl font-bold leading-none whitespace-pre-line text-white">
                           {member.name.split(" ").length === 2
                             ? member.name.split(" ").join("\n")
                             : member.name.split(" ").length === 3
                               ? `${member.name.split(" ")[0]}\n${member.name.split(" ").slice(1).join(" ")}`
                               : member.name}
                         </h3>
-                        <p className="mt-1 font-semibold text-base leading-tight text-white">
+                        <p className="mt-1 text-base font-medium uppercase tracking-[0.24em] text-[#f3c6ff] sm:text-lg">
                           {member.role}
                         </p>
                       </div>
 
-                      <div className="flex items-center justify-center text-[var(--team-dropdown-body)]">
+                      <div className="flex items-center justify-center text-white">
                         {isExpanded ? <ChevronUp className="h-6 w-6" /> : <ChevronDown className="h-6 w-6" />}
                       </div>
                     </div>
@@ -77,7 +77,7 @@ export function MobileTeamGrid({ members }: MobileTeamGridProps) {
             </div>
 
             {expandedMember ? (
-              <div className="mt-3 rounded-lg bg-[var(--team-dropdown-panel-bg)] px-4 pb-4 pt-4 text-[var(--team-dropdown-body)]">
+              <div className="mt-3 rounded-[24px] border border-white/12 bg-[#f1e6f8]/70 shadow-[0_22px_50px_rgba(21,8,31,0.2)] px-4 pb-4 pt-4 text-[#452b57]">
                 <p className="mb-3 whitespace-pre-line text-sm font-medium leading-relaxed">{expandedMember.bio}</p>
                 {expandedMember.socials &&
                 Object.values(expandedMember.socials).some((link) => link && link !== "#") ? (

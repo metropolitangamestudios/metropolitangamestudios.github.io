@@ -243,7 +243,24 @@ export function GamesPageClient() {
   const [openJamIndices, setOpenJamIndices] = useState<number[]>([0])
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[linear-gradient(180deg,_#5a3a72_0%,_#4d3163_24%,_#3a214d_58%,_#241132_100%)]">
+    <main className="relative isolate min-h-screen overflow-x-hidden">
+      <div className="fixed inset-0 -z-20 overflow-hidden pointer-events-none">
+        <video
+          className="h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src="/images/mgs_website_bg.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div className="fixed inset-0 -z-10 bg-[rgba(69,43,87,0.62)] pointer-events-none" />
+
+      <div className="relative z-10">
       <Header />
 
       <section className="pb-20 pt-24 sm:pt-28">
@@ -337,6 +354,7 @@ export function GamesPageClient() {
           </div>
         </div>
       </section>
+      </div>
 
       <Footer />
     </main>

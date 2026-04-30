@@ -72,14 +72,12 @@ function EventCard({ event }: { event: EventItem }) {
   const hasLinks = event.links && event.links.length > 0
 
   return (
-    <article className="w-full">
+    <article className="w-full overflow-hidden rounded-[24px] border border-white/12 bg-[#f1e6f8]/10 shadow-[0_22px_50px_rgba(21,8,31,0.2)] backdrop-blur-sm">
       <button
         type="button"
         onClick={() => setIsExpanded((value) => !value)}
         aria-expanded={isExpanded}
-        className={`w-full bg-[#b395c9] px-7 py-7 text-left transition-colors hover:bg-[#b79ccf] sm:px-7 sm:py-7 md:px-8 md:py-8 lg:px-9 lg:py-9 ${
-          isExpanded ? "rounded-t-[22px]" : "rounded-[22px]"
-        }`}
+        className={`w-full px-5 py-5 text-left transition-colors sm:px-6 sm:py-6 md:px-7 md:py-7 lg:px-8 lg:py-8`}
       >
         <div className="flex flex-col sm:flex-row items-stretch gap-4 sm:gap-5 md:gap-6">
           <div className="relative w-full h-42 shrink-0 overflow-hidden rounded-[12px] border-2 border-white/45 sm:h-44 sm:w-44 sm:order-last md:h-56 md:w-56">
@@ -94,7 +92,7 @@ function EventCard({ event }: { event: EventItem }) {
 
           <div className="flex min-w-0 flex-1 flex-col justify-between">
             <div>
-              <h2 className="font-display text-4xl font-bold leading-none text-[#452b57] sm:text-3xl md:text-7xl">
+              <h2 className="font-display text-4xl font-bold leading-none text-white sm:text-3xl md:text-7xl">
                 {event.title}
               </h2>
               {(() => {
@@ -107,13 +105,13 @@ function EventCard({ event }: { event: EventItem }) {
                 return (
                   <div className="mt-2 flex flex-col gap-1">
                     <div className="flex items-center gap-3">
-                      <Calendar className="h-4 w-4 sm:h-4 sm:w-4 md:h-6 md:w-6 text-white" />
-                      <span className="font-semibold text-xl leading-none sm:text-base md:text-2xl text-white">{displayDate}</span>
+                      <Calendar className="h-4 w-4 sm:h-4 sm:w-4 md:h-6 md:w-6 text-[#f3c6ff]" />
+                      <span className="font-medium text-base uppercase tracking-[0.24em] text-[#f3c6ff] sm:text-lg">{displayDate}</span>
                     </div>
                     {locationText ? (
                       <div className="flex items-center gap-3">
-                        <MapPin className="h-4 w-4 sm:h-4 sm:w-4 md:h-6 md:w-6 text-white" />
-                        <span className="font-semibold text-xl leading-none sm:text-base md:text-2xl text-white">{displayLocation}</span>
+                        <MapPin className="h-4 w-4 sm:h-4 sm:w-4 md:h-6 md:w-6 text-[#f3c6ff]" />
+                        <span className="font-medium text-base uppercase tracking-[0.24em] text-[#f3c6ff] sm:text-lg">{displayLocation}</span>
                       </div>
                     ) : null}
                   </div>
@@ -121,7 +119,7 @@ function EventCard({ event }: { event: EventItem }) {
               })()}
             </div>
 
-            <div className="mt-3 flex items-center gap-2 text-sm font-medium text-[#452b57] sm:text-base">
+            <div className="mt-3 flex items-center gap-2 text-sm font-medium text-white sm:text-base">
               {isExpanded ? <ChevronUp className="h-6 w-6" /> : <ChevronDown className="h-6 w-6" />}
               <span>{isExpanded ? "Less" : "More"}</span>
             </div>
@@ -139,8 +137,8 @@ function EventCard({ event }: { event: EventItem }) {
             isExpanded ? "translate-y-0 opacity-100" : "-translate-y-1 opacity-0"
           }`}
         >
-          <div className="rounded-b-[22px] bg-[#e2c7ef] px-5 pb-6 pt-5 text-[#452b57] sm:px-6 sm:pb-7 sm:pt-6 md:px-7 md:pb-8 md:pt-7 lg:px-8 lg:pb-9 lg:pt-8">
-            <p className="text-sm leading-relaxed sm:text-base">{event.description}</p>
+          <div className="rounded-b-[24px] bg-[#f1e6f8]/70 border-t border-white/12 px-5 pb-6 pt-5 text-[#452b57] sm:px-6 sm:pb-7 sm:pt-6 md:px-7 md:pb-8 md:pt-7 lg:px-8 lg:pb-9 lg:pt-8">
+            <p className="font-body text-sm sm:text-base md:text-lg mb-3 sm:mb-4 whitespace-pre-line leading-relaxed">{event.description}</p>
 
             {hasLinks ? (
               <div className="mt-4 flex flex-wrap gap-3">
@@ -150,7 +148,7 @@ function EventCard({ event }: { event: EventItem }) {
                     href={link.href}
                     target={link.href.startsWith("http") ? "_blank" : undefined}
                     rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="inline-flex items-center gap-3 rounded-full border border-[#452b57]/20 bg-white/70 px-4 py-2 font-display text-xl uppercase tracking-wide text-[#452b57] transition-colors hover:bg-white sm:px-5 sm:py-2.5 sm:text-2xl md:px-6 md:py-3 md:text-3xl"
+                    className="inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/10 px-4 py-2 font-display text-xl uppercase tracking-wide text-white transition-colors hover:bg-white/20 sm:px-5 sm:py-2.5 sm:text-2xl md:px-6 md:py-3 md:text-3xl"
                   >
                     <span>{link.label}</span>
                     <ExternalLink className="h-5 w-5 md:h-6 md:w-6" />
@@ -181,7 +179,24 @@ export function EventsPageClient() {
   }, [selectedSeasonId])
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[linear-gradient(180deg,_#5a3a72_0%,_#4d3163_38%,_#452b57_72%,_#3e254f_100%)]">
+    <main className="relative isolate min-h-screen overflow-x-hidden">
+      <div className="fixed inset-0 -z-20 overflow-hidden pointer-events-none">
+        <video
+          className="h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden="true"
+        >
+          <source src="/images/mgs_website_bg.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div className="fixed inset-0 -z-10 bg-[rgba(69,43,87,0.62)] pointer-events-none" />
+
+      <div className="relative z-10">
       <Header />
 
       <section className="pb-16 pt-24 sm:pb-20 sm:pt-28">
@@ -250,6 +265,7 @@ export function EventsPageClient() {
           </div>
         </div>
       </section>
+      </div>
 
       <Footer />
     </main>

@@ -5,7 +5,7 @@ import { faDiscord, faYoutube, faTwitch, faInstagram, faLinkedin } from '@fortaw
 
 export function Footer() {
   return (
-    <footer className="bg-[#6b5b83] border-t border-[#B8A5D4] py-5 sm:py-6">
+    <footer className="bg-[#7d4fa3] border-t border-[#B8A5D4] py-5 sm:py-6">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
           <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
