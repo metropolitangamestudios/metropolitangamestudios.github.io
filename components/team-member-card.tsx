@@ -149,7 +149,7 @@ export function TeamMemberCard({
             isExpanded ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1"
           }`}
         >
-          <div className="bg-[#f1e6f8]/60 rounded-b-[24px] border-t border-white/12 px-4 sm:px-6 pt-4 sm:pt-6 pb-4 sm:pb-6">
+          <div className="bg-[#f1e6f8]/75 rounded-b-[24px] border-t border-white/12 px-4 sm:px-6 pt-4 sm:pt-6 pb-4 sm:pb-6">
             <p className="text-[#452b57] font-medium text-sm sm:text-base md:text-lg mb-3 sm:mb-4 whitespace-pre-line">{member.bio}</p>
             {hasSocials && <SocialLinks socials={member.socials} size="sm" centered />}
           </div>
