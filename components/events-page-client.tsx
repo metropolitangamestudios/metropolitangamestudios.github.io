@@ -105,12 +105,12 @@ function EventCard({ event }: { event: EventItem }) {
                 return (
                   <div className="mt-2 flex flex-col gap-1">
                     <div className="flex items-center gap-3">
-                      <Calendar className="h-4 w-4 sm:h-4 sm:w-4 md:h-6 md:w-6 text-[#f3c6ff]" />
+                      <Calendar className="h-4 w-4 shrink-0 sm:h-4 sm:w-4 md:h-6 md:w-6 text-[#f3c6ff]" />
                       <span className="font-medium text-base uppercase tracking-[0.24em] text-[#f3c6ff] sm:text-lg">{displayDate}</span>
                     </div>
                     {locationText ? (
                       <div className="flex items-center gap-3">
-                        <MapPin className="h-4 w-4 sm:h-4 sm:w-4 md:h-6 md:w-6 text-[#f3c6ff]" />
+                        <MapPin className="h-4 w-4 shrink-0 sm:h-4 sm:w-4 md:h-6 md:w-6 text-[#f3c6ff]" />
                         <span className="font-medium text-base uppercase tracking-[0.24em] text-[#f3c6ff] sm:text-lg">{displayLocation}</span>
                       </div>
                     ) : null}
